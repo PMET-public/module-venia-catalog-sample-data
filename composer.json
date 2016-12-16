@@ -1,11 +1,11 @@
 {
     "name": "magentoese/module-venia-catalog-sample-data”,
+    "type": "magento2-module",
     "require": {
+        "magento/framework": "*",
         "firegento/fastsimpleimport2": "dev-master",
         "magentoese/module-venia-setup": "dev-master"
-    },
-    "type": "magento2-module",
-    "version": "0.0.1",
+        },
     "autoload": {
         "files": [
             "registration.php"
