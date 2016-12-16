@@ -1,5 +1,5 @@
 {
-    "name": "magentoese/module-venia-catalog-sample-data”,
+    "name": "magentoese/module-venia-catalog-sample-data",
     "type": "magento2-module",
     "require": {
         "magento/framework": "*",
