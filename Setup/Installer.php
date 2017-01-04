@@ -53,7 +53,7 @@ class Installer implements Setup\SampleData\InstallerInterface
      */
     public function install()
     {
-        //$this->attributeSetup->install(['MagentoEse_VeniaCatalogSampleData::fixtures/attributes.csv']);
+        $this->attributeSetup->install(['MagentoEse_VeniaCatalogSampleData::fixtures/attributes.csv']);
         $this->categorySetup->install(['MagentoEse_VeniaCatalogSampleData::fixtures/categories.csv']);
         //$this->productSetup->install(['MagentoEse_VeniaCatalogSampleData::fixtures/milwaukee_products_1.csv']);
     }
