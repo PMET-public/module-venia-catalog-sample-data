@@ -1,66 +1,23 @@
 frontend_label,frontend_input,is_required,option,default,attribute_code,is_global,default_value_text,default_value_yesno,default_value_date,default_value_textarea,is_unique,is_searchable,is_visible_in_advanced_search,is_comparable,is_filterable,is_filterable_in_search,position,is_used_for_promo_rules,is_html_allowed_on_front,is_visible_on_front,used_in_product_listing,used_for_sort_by,attribute_set
-Fashion Color,select,0,"Salmon
-Aqua
-Black
+Fashion Color,select,0,"Pink
+Peach
+Periwinkle
 Blue
 Green
-Lime
-Orange
-Pink
-Purple
-Royal
-Red
-Lavender
-White
 Yellow
-Teal
-Teal Lime
-Sand
-Navy White
-Lime White
-Brown Cream
-Chocolate
-Cream Tan
-Salmon Gold
-Teal Silver
-Silver
-Gold
-Gray Black
-Gold Black Turquoise
-Light Blue
-Deep Pink
-Mint
-Gray
-Black White
-Blue Green
-Taupe
-Spectrum
-Navy
-Cream
-Red Pink
-Navy Lime
-Ivory
-Cayenne
-Seafoam
-Lemon
-Tangerine
-White Navy",,fashion_color,1,,0,,,0,1,1,1,1,1,,0,1,1,1,0,"Fashion Accessories
+Brown",,fashion_color,1,,0,,,0,1,1,1,1,1,,0,1,1,1,0,"Fashion Accessories
 Dresses
 Fashion Tops
 Fashion Bottoms"
-Fashion Size,select,0,"L
+"Fashion Size
+Fashion Size",select,0,"L
 M
 S
 XL
-XS
-0
-10
-12
-14
 2
 4
 6
-8",,fashion_size,1,,0,,,0,1,1,1,1,1,,0,1,1,1,0,"Fashion Accessories
+8",,fashion_size,1,,0,,,0,0,0,,1,0,,1,1,0,1,0,"Fashion Accessories
 Dresses
 Fashion Tops
 Fashion Bottoms"
