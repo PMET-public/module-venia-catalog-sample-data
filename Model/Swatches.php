@@ -15,13 +15,16 @@ class Swatches
      * @var array
      */
     protected $colorMap = [
-        'Pink'      => '#fee1d2',
-        'Peach'     => '#f9efe5',
-        'Periwinkle'=> '#dcd5e1',
-        'Blue'      => '#d4e3ec',
-        'Green'     => '#d8f0d8',
-        'Yellow'    => '#f0f0c0',
-        'Brown'     => '#C0a890'
+        'Peach'     => '#fee1d2',
+        'Khaki'     => '#f9efe5',
+        'Lilac'     => '#dcd5e1',
+        'Rain'      => '#d4e3ec',
+        'Mint'      => '#d8f0d8',
+        'Lily'     => '#f0f0c0',
+        'Latte'     => '#C0a890',
+        'Gold'      => '#D4AF37',
+        'Silver'    => '#cdd0d7',
+        'Cocoa'     => '#3E1803'
     ];
     /**
      * @var \Magento\Eav\Model\ResourceModel\Entity\Attribute\Option\CollectionFactory
