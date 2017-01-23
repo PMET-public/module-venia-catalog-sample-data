@@ -34,12 +34,7 @@ class Product
      */
     protected $catalogConfig;
 
-    /**
-     * @var Product\Converter
-     */
-    protected $converter;
-
-    /**
+     /**
      * @var \Magento\Framework\File\Csv
      */
     protected $csvReader;
@@ -62,22 +57,19 @@ class Product
     /**
      * Product constructor.
      * @param SampleDataContext $sampleDataContext
-     * @param Product\Converter $converter
-     * @param Product\Gallery $gallery
      * @param \Magento\Store\Model\StoreManagerInterface $storeManager
      * @param \Magento\Eav\Model\Config $eavConfig
+     * @param \Magento\Framework\ObjectManagerInterface $objectManager
      */
 
     protected $objectManager;
     public function __construct(
         SampleDataContext $sampleDataContext,
-        \MagentoEse\VeniaCatalogSampleData\Model\Product\Converter $converter,
         \Magento\Store\Model\StoreManagerInterface $storeManager,
         \Magento\Eav\Model\Config $eavConfig,
         \Magento\Framework\ObjectManagerInterface $objectManager
     ) {
         $this->fixtureManager = $sampleDataContext->getFixtureManager();
-        $this->converter = $converter;
         $this->csvReader = $sampleDataContext->getCsvReader();
         $this->storeManager = $storeManager;
         $this->eavConfig = $eavConfig;
@@ -86,7 +78,6 @@ class Product
 
     /**
      * @param array $productFixtures
-     * @param array $galleryFixtures
      * @throws \Exception
      */
     public function install(array $productFixtures)
