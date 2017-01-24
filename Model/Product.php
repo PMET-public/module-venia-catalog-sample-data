@@ -40,16 +40,6 @@ class Product
     protected $csvReader;
 
     /**
-     * @var Product\Gallery
-     */
-    protected $gallery;
-
-    /**
-     * @var \Magento\Store\Model\StoreManagerInterface
-     */
-    protected $storeManager;
-
-    /**
      * @var \Magento\Eav\Model\Config
      */
     protected $eavConfig;
@@ -57,7 +47,6 @@ class Product
     /**
      * Product constructor.
      * @param SampleDataContext $sampleDataContext
-     * @param \Magento\Store\Model\StoreManagerInterface $storeManager
      * @param \Magento\Eav\Model\Config $eavConfig
      * @param \Magento\Framework\ObjectManagerInterface $objectManager
      */
@@ -65,13 +54,11 @@ class Product
     protected $objectManager;
     public function __construct(
         SampleDataContext $sampleDataContext,
-        \Magento\Store\Model\StoreManagerInterface $storeManager,
         \Magento\Eav\Model\Config $eavConfig,
         \Magento\Framework\ObjectManagerInterface $objectManager
     ) {
         $this->fixtureManager = $sampleDataContext->getFixtureManager();
         $this->csvReader = $sampleDataContext->getCsvReader();
-        $this->storeManager = $storeManager;
         $this->eavConfig = $eavConfig;
         $this->objectManager=$objectManager;
     }
