@@ -2,7 +2,7 @@
 
 namespace MagentoEse\VeniaCatalogSampleData\Model;
 use Magento\Framework\Setup\SampleData\Context as SampleDataContext;
-
+use Magento\Store\Api\Data\StoreInterface;
 
 
 class LumaSuppression
@@ -15,27 +15,34 @@ class LumaSuppression
     protected $sampleDataContext;
 
     /**
-     * @var \Magento\Catalog\Model\ProductFactory
+     * @var \Magento\Catalog\Api\Data\ProductInterfaceFactory
      */
     protected $productFactory;
 
     /**
-     * @var \Magento\Store\Model\Store
+     * @var \Magento\Store\Api\Data\StoreInterface
      */
     protected $storeView;
 
     /**
+     * @var \Magento\Indexer\Model\Processor
+     */
+    protected $index;
+
+    /**
      * Product constructor.
      * @param SampleDataContext $sampleDataContext
-     * @param \Magento\Catalog\Model\ProductFactory $productFactory
-     * #param \Magento\Store\Model\Store $storeView
+     * @param \Magento\Catalog\Api\Data\ProductInterfaceFactory $productFactory
+     * @param \Magento\Store\Api\Data\StoreInterface $storeView
+     * @param \Magento\Indexer\Model\Processor $index
      **/
 
     public function __construct(
         SampleDataContext $sampleDataContext,
-        \Magento\Catalog\Model\ProductFactory $productFactory,
-        \Magento\Store\Model\Store $storeView,
+        \Magento\Catalog\Api\Data\ProductInterfaceFactory $productFactory,
+        \Magento\Store\Api\Data\StoreInterface $storeView,
         \Magento\Indexer\Model\Processor $index
+
 
     ) {
         $this->fixtureManager = $sampleDataContext->getFixtureManager();

@@ -49,6 +49,20 @@ Wool",,fashion_material,1,,0,,,0,1,1,1,1,1,,1,1,1,1,1,"Fashion Accessories
 Dresses
 Fashion Tops
 Fashion Bottoms"
+"Style
+Fashion Style",multiselect,0,"Shorter Length
+Longer Length
+Short Sleeve
+Sleeveless
+Short Sleeve
+Long Sleeve
+Sleeveless
+3/4 Sleeve
+Slim Fit
+Wide Leg
+Capri",,fashion_style,1,,0,,,0,1,1,1,1,1,,1,1,1,1,1,"Dresses
+Fashion Tops
+Fashion Bottoms"
 Has Video,boolean,0,,,has_video,1,,0,,,0,1,1,1,1,1,,1,1,1,1,0,"Fashion Accessories
 Dresses
 Fashion Tops

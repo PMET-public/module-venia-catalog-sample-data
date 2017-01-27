@@ -27,7 +27,7 @@ class Attribute
     protected $attributeFactory;
 
     /**
-     * @var \Magento\Eav\Model\Entity\Attribute\SetFactory
+     * @var \Magento\Eav\Api\Data\AttributeSetInterfaceFactory
      */
     protected $attributeSetFactory;
 
@@ -46,25 +46,22 @@ class Attribute
      */
     protected $eavConfig;
 
-    /**
-     * @var \Magento\Framework\File\Csv
+     /**
+     * @var \Magento\Store\Model\StoreManagerInterface
      */
-    protected $csvReader;
+    protected $storeManager;
 
     /**
      * @var int
      */
     protected $entityTypeId;
 
-    /**
-     * @var \Magento\Store\Model\StoreManagerInterface
-     */
-    protected $storeManager;
+
 
     /**
      * @param SampleDataContext $sampleDataContext
      * @param \Magento\Catalog\Model\ResourceModel\Eav\AttributeFactory $attributeFactory
-     * @param \Magento\Eav\Model\Entity\Attribute\SetFactory $attributeSetFactory
+     * @param \Magento\Eav\Api\Data\AttributeSetInterfaceFactory $attributeSetFactory
      * @param \Magento\Eav\Model\ResourceModel\Entity\Attribute\Option\CollectionFactory $attrOptionCollectionFactory
      * @param \Magento\Catalog\Helper\Product $productHelper
      * @param \Magento\Eav\Model\Config $eavConfig
@@ -73,11 +70,12 @@ class Attribute
     public function __construct(
         SampleDataContext $sampleDataContext,
         \Magento\Catalog\Model\ResourceModel\Eav\AttributeFactory $attributeFactory,
-        \Magento\Eav\Model\Entity\Attribute\SetFactory $attributeSetFactory,
+        \Magento\Eav\Api\Data\AttributeSetInterfaceFactory $attributeSetFactory,
         \Magento\Eav\Model\ResourceModel\Entity\Attribute\Option\CollectionFactory $attrOptionCollectionFactory,
         \Magento\Catalog\Helper\Product $productHelper,
         \Magento\Eav\Model\Config $eavConfig,
         \Magento\Store\Model\StoreManagerInterface $storeManager
+
     ) {
         $this->fixtureManager = $sampleDataContext->getFixtureManager();
         $this->csvReader = $sampleDataContext->getCsvReader();

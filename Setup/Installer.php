@@ -38,11 +38,19 @@ class Installer implements Setup\SampleData\InstallerInterface
     protected $swatchesSetup;
 
     /**
-     * Convert fashion_color and fashion_size attribute to swatches
+     * Suppress downloadable and bundled Luma products from Venia
      *
      * @var \MagentoEse\VeniaCatalogSampleData\Model\LumaSuppression
      */
     protected $lumaSuppression;
+
+
+    /**
+     * App State
+     *
+     * @var \Magento\Framework\App\State
+     */
+    protected $state;
 
     /**
      * @param \MagentoEse\VeniaCatalogSampleData\Model\Category $categorySetup
@@ -50,6 +58,7 @@ class Installer implements Setup\SampleData\InstallerInterface
      * @param \MagentoEse\VeniaCatalogSampleData\Model\Product $productSetup
      * @param \MagentoEse\VeniaCatalogSampleData\Model\Swatches $swatchesSetup
      * @param \MagentoEse\VeniaCatalogSampleData\Model\LumaSuppression $lumaSuppression
+     * @param \Magento\Framework\App\State $state
      */
 
 
@@ -58,13 +67,20 @@ class Installer implements Setup\SampleData\InstallerInterface
         \MagentoEse\VeniaCatalogSampleData\Model\Attribute $attributeSetup,
         \MagentoEse\VeniaCatalogSampleData\Model\Product $productSetup,
         \MagentoEse\VeniaCatalogSampleData\Model\Swatches $swatchesSetup,
-        \MagentoEse\VeniaCatalogSampleData\Model\LumaSuppression $lumaSuppression
+        \MagentoEse\VeniaCatalogSampleData\Model\LumaSuppression $lumaSuppression,
+        \Magento\Framework\App\State $state
     ) {
         $this->categorySetup = $categorySetup;
         $this->attributeSetup = $attributeSetup;
         $this->productSetup = $productSetup;
         $this->swatchesSetup = $swatchesSetup;
         $this->lumaSuppression = $lumaSuppression;
+        try{
+            $state->setAreaCode('adminhtml');
+        }
+        catch(\Magento\Framework\Exception\LocalizedException $e){
+            // left empty
+        }
 
     }
 

@@ -19,47 +19,20 @@ class Product
      */
     protected $fixtureManager;
 
-    /**
-     * @var string
-     */
-    protected $productType = \Magento\Catalog\Model\Product\Type::TYPE_SIMPLE;
-
-    /**
-     * @var int
-     */
-    protected $attributeSetId;
-
-    /**
-     * @var \Magento\Catalog\Model\Config
-     */
-    protected $catalogConfig;
 
      /**
-     * @var \Magento\Framework\File\Csv
-     */
-    protected $csvReader;
-
-    /**
-     * @var \Magento\Eav\Model\Config
-     */
-    protected $eavConfig;
-
-    /**
      * Product constructor.
      * @param SampleDataContext $sampleDataContext
-     * @param \Magento\Eav\Model\Config $eavConfig
      * @param \Magento\Framework\ObjectManagerInterface $objectManager
      */
 
     protected $objectManager;
     public function __construct(
         SampleDataContext $sampleDataContext,
-        \Magento\Eav\Model\Config $eavConfig,
         \Magento\Framework\ObjectManagerInterface $objectManager
     ) {
         $this->fixtureManager = $sampleDataContext->getFixtureManager();
         $this->csvReader = $sampleDataContext->getCsvReader();
-        $this->eavConfig = $eavConfig;
         $this->objectManager=$objectManager;
     }
 
@@ -69,8 +42,6 @@ class Product
      */
     public function install(array $productFixtures)
     {
-        $this->eavConfig->clear();
-
         foreach ($productFixtures as $fileName) {
             $fileName = $this->fixtureManager->getFixture($fileName);
             if (!file_exists($fileName)) {

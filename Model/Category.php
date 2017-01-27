@@ -18,7 +18,7 @@ class Category
     protected $fixtureManager;
 
     /**
-     * @var \Magento\Catalog\Model\CategoryFactory
+     * @var \Magento\Catalog\Api\Data\CategoryInterfaceFactory
      */
     protected $categoryFactory;
 
@@ -32,10 +32,6 @@ class Category
      */
     protected $resourceCategoryTreeFactory;
 
-    /**
-     * @var \Magento\Framework\File\Csv
-     */
-    protected $csvReader;
 
     /**
      * @var \Magento\Framework\Data\Tree\Node
@@ -43,25 +39,25 @@ class Category
     protected $categoryTree;
 
     /**
-     * @var \Magento\Store\Model\storeFactory
+     * @var \Magento\Store\Api\Data\StoreInterfaceFactory
      */
     protected $storeFactory;
 
     /**
      * @param SampleDataContext $sampleDataContext
-     * @param \Magento\Catalog\Model\CategoryFactory $categoryFactory
+     * @param \Magento\Catalog\Api\Data\CategoryInterfaceFactory $categoryFactory
      * @param \Magento\Catalog\Model\ResourceModel\Category\TreeFactory $resourceCategoryTreeFactory
      * @param \Magento\Store\Model\StoreManagerInterface $storeManager
-     *  * @param \Magento\Store\Model\StoreFactory $storeFactory
+     * @param \Magento\Store\Api\Data\StoreInterfaceFactory $storeFactory
      */
 
 
     public function __construct(
         SampleDataContext $sampleDataContext,
-        \Magento\Catalog\Model\CategoryFactory $categoryFactory,
+        \Magento\Catalog\Api\Data\CategoryInterfaceFactory $categoryFactory,
         \Magento\Catalog\Model\ResourceModel\Category\TreeFactory $resourceCategoryTreeFactory,
         \Magento\Store\Model\StoreManagerInterface $storeManager,
-        \Magento\Store\Model\StoreFactory $storeFactory
+        \Magento\Store\Api\Data\StoreInterfaceFactory $storeFactory
     ) {
         $this->fixtureManager = $sampleDataContext->getFixtureManager();
         $this->csvReader = $sampleDataContext->getCsvReader();
