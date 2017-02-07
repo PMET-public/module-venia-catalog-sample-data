@@ -101,7 +101,7 @@ class Installer implements Setup\SampleData\InstallerInterface
         $this->lumaSuppression->install(['MagentoEse_VeniaCatalogSampleData::fixtures/suppressAdditionalLumaProductsFromVenia.csv']);
         //add venia products
         $this->productSetup->install(['MagentoEse_VeniaCatalogSampleData::fixtures/veniaProducts.csv']);
-
-
+        //reIndex as MECE redeploy will not automatically reindex
+        $this->index->reindexAll();
     }
 }
