@@ -13,7 +13,7 @@ Lily
 Latte
 Gold
 Silver
-Cocoa",,fashion_color,1,,0,,,0,1,1,1,1,1,,0,1,1,1,0,"Fashion Accessories
+Cocoa",,fashion_color,1,,0,,,0,1,1,1,1,1,,0,1,0,1,0,"Fashion Accessories
 Dresses
 Fashion Tops
 Fashion Bottoms"
@@ -51,7 +51,7 @@ Silk
 Spandex
 Sterling Silver
 Viscose
-Wool",,fashion_material,1,,0,,,0,1,1,1,1,1,,1,1,1,1,1,"Fashion Accessories
+Wool",,fashion_material,1,,0,,,0,1,1,1,1,1,,1,1,1,1,0,"Fashion Accessories
 Dresses
 Fashion Tops
 Fashion Bottoms"
@@ -79,7 +79,7 @@ Rectangle
 Infinity
 Braided
 Lasercut
-Woven",,fashion_style,1,,0,,,0,1,1,1,1,1,,1,1,1,1,1,"Dresses
+Woven",,fashion_style,1,,0,,,0,1,1,1,1,1,,1,1,1,1,0,"Dresses
 Fashion Tops
 Fashion Bottoms"
 Has Video,boolean,0,,,has_video,1,,0,,,0,1,1,1,1,1,,1,1,1,1,0,"Fashion Accessories
