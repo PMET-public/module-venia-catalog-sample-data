@@ -46,6 +46,14 @@ class Installer implements Setup\SampleData\InstallerInterface
 
 
     /**
+     * Upsells
+     *
+     * @var \MagentoEse\VeniaCatalogSampleData\Model\Upsells
+     */
+    protected $upsells;
+
+
+    /**
      * App State
      *
      * @var \Magento\Framework\App\State
@@ -69,6 +77,7 @@ class Installer implements Setup\SampleData\InstallerInterface
      * @param \Magento\Framework\App\State $state
      * @param \Magento\CatalogRuleSampleData\Model\Rule $catalogRule
      * @param \Magento\SalesRuleSampleData\Model\Rule $salesRule
+     * @param \MagentoEse\VeniaCatalogSampleData\Model\Upsells $upsells
      */
 
 
@@ -80,7 +89,8 @@ class Installer implements Setup\SampleData\InstallerInterface
         \MagentoEse\VeniaCatalogSampleData\Model\LumaSuppression $lumaSuppression,
         \Magento\Framework\App\State $state,
         \Magento\CatalogRuleSampleData\Model\Rule $catalogRule,
-        \Magento\SalesRuleSampleData\Model\Rule $salesRule
+        \Magento\SalesRuleSampleData\Model\Rule $salesRule,
+        \MagentoEse\VeniaCatalogSampleData\Model\Upsells $upsells
     ) {
         $this->categorySetup = $categorySetup;
         $this->attributeSetup = $attributeSetup;
@@ -89,6 +99,7 @@ class Installer implements Setup\SampleData\InstallerInterface
         $this->lumaSuppression = $lumaSuppression;
         $this->catalogRule  = $catalogRule;
         $this->salesRule = $salesRule;
+        $this->upsells = $upsells;
         try{
             $state->setAreaCode('adminhtml');
         }
@@ -119,6 +130,8 @@ class Installer implements Setup\SampleData\InstallerInterface
         $this->catalogRule->install(['MagentoEse_VeniaCatalogSampleData::fixtures/catalogRules.csv']);
         //add cart promos
         $this->salesRule->install(['MagentoEse_VeniaCatalogSampleData::fixtures/salesRules.csv']);
+        //add upsells
+        $this->upsells->install(['MagentoEse_VeniaCatalogSampleData::fixtures/upsells.csv']);
         //reIndex as MECE redeploy will not automatically reindex
         $this->index->reindexAll();
     }
