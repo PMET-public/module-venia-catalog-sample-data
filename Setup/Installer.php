@@ -51,6 +51,14 @@ class Installer implements Setup\SampleData\InstallerInterface
      * @var \Magento\Framework\App\State
      */
     protected $state;
+    /**
+     * @var \Magento\CatalogRuleSampleData\Model\Rule
+     */
+    protected $catalogRule;
+    /**
+     * @var \Magento\SalesRuleSampleData\Model\Rule
+     */
+    protected $salesRule;
 
     /**
      * @param \MagentoEse\VeniaCatalogSampleData\Model\Category $categorySetup
@@ -59,6 +67,8 @@ class Installer implements Setup\SampleData\InstallerInterface
      * @param \MagentoEse\VeniaCatalogSampleData\Model\Swatches $swatchesSetup
      * @param \MagentoEse\VeniaCatalogSampleData\Model\LumaSuppression $lumaSuppression
      * @param \Magento\Framework\App\State $state
+     * @param \Magento\CatalogRuleSampleData\Model\Rule $catalogRule
+     * @param \Magento\SalesRuleSampleData\Model\Rule $salesRule
      */
 
 
@@ -68,13 +78,17 @@ class Installer implements Setup\SampleData\InstallerInterface
         \MagentoEse\VeniaCatalogSampleData\Model\Product $productSetup,
         \MagentoEse\VeniaCatalogSampleData\Model\Swatches $swatchesSetup,
         \MagentoEse\VeniaCatalogSampleData\Model\LumaSuppression $lumaSuppression,
-        \Magento\Framework\App\State $state
+        \Magento\Framework\App\State $state,
+        \Magento\CatalogRuleSampleData\Model\Rule $catalogRule,
+        \Magento\SalesRuleSampleData\Model\Rule $salesRule
     ) {
         $this->categorySetup = $categorySetup;
         $this->attributeSetup = $attributeSetup;
         $this->productSetup = $productSetup;
         $this->swatchesSetup = $swatchesSetup;
         $this->lumaSuppression = $lumaSuppression;
+        $this->catalogRule  = $catalogRule;
+        $this->salesRule = $salesRule;
         try{
             $state->setAreaCode('adminhtml');
         }
@@ -101,6 +115,10 @@ class Installer implements Setup\SampleData\InstallerInterface
         $this->lumaSuppression->install(['MagentoEse_VeniaCatalogSampleData::fixtures/suppressAdditionalLumaProductsFromVenia.csv']);
         //add venia products
         $this->productSetup->install(['MagentoEse_VeniaCatalogSampleData::fixtures/veniaProducts.csv']);
+        //add catalog promos
+        $this->catalogRule->install(['MagentoEse_VeniaCatalogSampleData::fixtures/catalogRules.csv']);
+        //add cart promos
+        $this->salesRule->install(['MagentoEse_VeniaCatalogSampleData::fixtures/salesRules.csv']);
         //reIndex as MECE redeploy will not automatically reindex
         $this->index->reindexAll();
     }

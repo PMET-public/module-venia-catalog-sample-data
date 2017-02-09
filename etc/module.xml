@@ -15,6 +15,8 @@
         <module name="Magento_Store"/>
         <module name="Magento_Indexer"/>
         <module name="MagentoEse_VeniaSetup"/>
+        <module name="Magento_CatalogRuleSampleData"/>
+        <module name="Magento_SalesRuleSampleData"/>
     </sequence>
     </module>
 </config>
