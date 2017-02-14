@@ -69,6 +69,11 @@ class Installer implements Setup\SampleData\InstallerInterface
     protected $salesRule;
 
     /**
+     * @var \MagentoEse\VeniaCatalogSampleData\Model\Review
+     */
+    protected $review;
+
+    /**
      * @param \MagentoEse\VeniaCatalogSampleData\Model\Category $categorySetup
      * @param \MagentoEse\VeniaCatalogSampleData\Model\Attribute $attributeSetup
      * @param \MagentoEse\VeniaCatalogSampleData\Model\Product $productSetup
@@ -78,6 +83,7 @@ class Installer implements Setup\SampleData\InstallerInterface
      * @param \Magento\CatalogRuleSampleData\Model\Rule $catalogRule
      * @param \Magento\SalesRuleSampleData\Model\Rule $salesRule
      * @param \MagentoEse\VeniaCatalogSampleData\Model\Upsells $upsells
+     * @param \MagentoEse\VeniaCatalogSampleData\Model\Review $review
      */
 
 
@@ -90,7 +96,8 @@ class Installer implements Setup\SampleData\InstallerInterface
         \Magento\Framework\App\State $state,
         \Magento\CatalogRuleSampleData\Model\Rule $catalogRule,
         \Magento\SalesRuleSampleData\Model\Rule $salesRule,
-        \MagentoEse\VeniaCatalogSampleData\Model\Upsells $upsells
+        \MagentoEse\VeniaCatalogSampleData\Model\Upsells $upsells,
+        \MagentoEse\VeniaCatalogSampleData\Model\Review $review
     ) {
         $this->categorySetup = $categorySetup;
         $this->attributeSetup = $attributeSetup;
@@ -100,6 +107,7 @@ class Installer implements Setup\SampleData\InstallerInterface
         $this->catalogRule  = $catalogRule;
         $this->salesRule = $salesRule;
         $this->upsells = $upsells;
+        $this->review = $review;
         try{
             $state->setAreaCode('adminhtml');
         }
@@ -132,7 +140,10 @@ class Installer implements Setup\SampleData\InstallerInterface
         $this->salesRule->install(['MagentoEse_VeniaCatalogSampleData::fixtures/salesRules.csv']);
         //add upsells
         $this->upsells->install(['MagentoEse_VeniaCatalogSampleData::fixtures/upsells.csv']);
+        //add reviews
+        $this->review->install(['MagentoEse_VeniaCatalogSampleData::fixtures/reviews.csv']);
         //reIndex as MECE redeploy will not automatically reindex
         $this->index->reindexAll();
+
     }
 }
