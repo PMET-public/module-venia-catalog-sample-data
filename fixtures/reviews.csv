@@ -1,3 +1,141 @@
-sku,store,rating,title,review,reviewer,email
-VT12,venia_us,"Price=3,Value=4,Quality=2",I prefer more compartments,"I prefer more compartments. If you don't mind putting everything in one space, it's fine. Good for the gym.",Chi,
-VT12,venia_us,"Price=1,Value=2,Quality=5",This Sucks,Dont buy,Phil,
+sku,store,rating,title,review,reviewer
+VA01,venia_us,"Quality=4,Value=4,Price=4",ONE OF MY FAVORITES,This scarf is actually nicer in person than the pictures online show. It's so soft and easily works with just about every outfit. ,Eva
+VA01,venia_us,"Quality=5,Value=5,Price=5",BEAUTIFUL SCARF,I adore this beautiful scarf. It is the perfect year-round weight. It also washes and wears very easily.  ,Ainsley
+VA02,venia_us,"Quality=4,Value=5,Price=3",SUPER VERSATILE,This scarf came with instructions on how to wear many different ways which is perfect for someone like me. ,Marie
+VA02,venia_us,"Quality=5,Value=4,Price=4",BEAUTIFUL SCARF,"No matter when I shop this store, or what I'm looking for, I always wind up with a scarf. They're just too lovely to resist!",Elizabeth
+VA03,venia_us,"Quality=3,Value=4,Price=3",NOT FOR WARMTH,This scarf is very pretty and I've received lots of compliments. But I would say it's more decorative and less warm. ,Laura
+VA03,venia_us,"Quality=4,Value=5,Price=3",SUPER VERSATILE,This scarf came with instructions on how to wear many different ways which is perfect for someone like me. ,Jaci
+VA04,venia_us,"Quality=4,Value=4,Price=4",ONE OF MY FAVORITES,This scarf is actually nicer in person than the pictures online show. It's so soft and easily works with just about every outfit. ,Grace
+VA04,venia_us,"Quality=4,Value=5,Price=3",SUPER VERSATILE,This scarf came with instructions on how to wear many different ways which is perfect for someone like me. ,Mia
+VA05,venia_us,"Quality=4,Value=4,Price=4",BEAUTIFUL SCARF,"No matter when I shop this store, or what I'm looking for, I always wind up with a scarf. They're just too lovely to resist!",Sarah
+VA05,venia_us,"Quality=4,Value=5,Price=3",SUPER VERSATILE,This scarf came with instructions on how to wear many different ways which is perfect for someone like me. ,Sharon
+VA06,venia_us,"Quality=4,Value=5,Price=3",SUPER VERSATILE,This scarf came with instructions on how to wear many different ways which is perfect for someone like me. ,Lisa
+VA06,venia_us,"Quality=2,Value=3,Price=3",NOT EASY CARE,I love this scarf and look forward to having it as a long time staple. Unfortunately it isn't wash and wear so its longevity is TBD.,Talia
+VA07,venia_us,"Quality=2,Value=4,Price=4",RUNS LARGE,I with I could keep this belt but it's far too large for me. I got the XS which usually works for me in other Venia belts.,Eva
+VA07,venia_us,"Quality=4,Value=5,Price=5",ABSOLUTE STAPLE,Love this belt. The color and style make it so versatile and it works with pretty much my entire wardrobe. Total essential. ,Ainsley
+VA08,venia_us,"Quality=4,Value=5,Price=5",ABSOLUTE STAPLE,Love this belt. The color and style make it so versatile and it works with pretty much my entire wardrobe. Total essential. ,Marie
+VA08,venia_us,"Quality=2,Value=4,Price=4",RUNS LARGE,I with I could keep this belt but it's far too large for me. I got the XS which usually works for me in other Venia belts.,Elizabeth
+VA09,venia_us,"Quality=2,Value=4,Price=4",RUNS LARGE,I with I could keep this belt but it's far too large for me. I got the XS which usually works for me in other Venia belts.,Laura
+VA09,venia_us,"Quality=4,Value=5,Price=5",ABSOLUTE STAPLE,Love this belt. The color and style make it so versatile and it works with pretty much my entire wardrobe. Total essential. ,Jaci
+VA10,venia_us,"Quality=4,Value=5,Price=5",ABSOLUTE STAPLE,Love this belt. The color and style make it so versatile and it works with pretty much my entire wardrobe. Total essential. ,Grace
+VA10,venia_us,"Quality=2,Value=4,Price=4",RUNS LARGE,I with I could keep this belt but it's far too large for me. I got the XS which usually works for me in other Venia belts.,Mia
+VD01,venia_us,"Quality=4,Value=4,Price=4",COMFORTABLE & STYLISH,I love the lightness and softness of this fabric. It allows me to look very put together and still feel extremely comfortable. Win win!,Sarah
+VD01,venia_us,"Quality=5,Value=5,Price=5",INSTANT CLASSIC,I always love this style dress. Offers a great length and super flattering in all the right places. It's my new favorite!,Sharon
+VD02,venia_us,"Quality=4,Value=5,Price=3",PERFECT FOR DANCING,This dress has the perfect amount of twirl to it. It feels like it was made for dancing so can't wait to take it for a test drive!,Lisa
+VD02,venia_us,"Quality=4,Value=4,Price=4",BEAUTIFUL PATTERN,The details on this dress are outstanding. If I had one complaint it would be the price. But worth it based on how I feel when I wear it. ,Talia
+VD03,venia_us,"Quality=5,Value=4,Price=4",GREAT FOR CURVES,I always love this style dress. Offers a great length and super flattering in all the right places. It's my new favorite!,Eva
+VD03,venia_us,"Quality=4,Value=4,Price=5",THIS DRESS IS SO FUN,It fits true to size and the fabric lays nicely (not clingy). This dress is extremely lightweight and makes me feel amazing. ,Ainsley
+VD04,venia_us,"Quality=3,Value=4,Price=4",DRESS UP OR DOWN,"This is a fantastic, versatile dress! My only complaint is it falls just a tad short on my 5'10"" frame, but I'm used to that problem!",Marie
+VD04,venia_us,"Quality=5,Value=5,Price=5",BUILT-IN SUPPORT,"The built-in bra on this is perfection. It's so diificult to find the right support with spaghetti straps, and now it's a non-issue. Bravo!",Elizabeth
+VD05,venia_us,"Quality=3,Value=4,Price=4","GORGEOUS PRINT, FITS SMALL",The print is gorgeous as is the styling. But I usually wear a size 8 and it was tight on the waist. The size 10 fits like an 8.,Laura
+VD05,venia_us,"Quality=3,Value=4,Price=4",BEAUTIFUL PATTERN,"This is a fantastic dress! My only complaint is it falls just a tad short on my 5'10"" frame, but I'm used to that problem!",Jaci
+VD06,venia_us,"Quality=4,Value=4,Price=5",PERFECT FOR PETITES,"This dress has the perfect profile for my petite figure. While I'm only 5'3"", I do have some problem areas, and this fits beautifully. ",Grace
+VD06,venia_us,"Quality=5,Value=5,Price=4",THIS DRESS IS SO FUN,It fits true to size and the fabric lays nicely (not clingy). This dress is extremely lightweight and makes me feel amazing. ,Mia
+VD07,venia_us,"Quality=4,Value=4,Price=3",PERFECT FOR PETITES,"This dress has the perfect profile for my petite figure. While I'm only 5'3"", I do have some problem areas, and this fits beautifully. ",Sarah
+VD07,venia_us,"Quality=4,Value=5,Price=4",FLATTERING DRAPE,The drape on this dress is magnificent. I carry most of my weight in my middle and this style perfectly camouflages all the right spots.  ,Sharon
+VD08,venia_us,"Quality=4,Value=4,Price=4",BEAUTIFUL PATTERN,"This is a fantastic dress! My only complaint is it falls just a tad short on my 5'10"" frame, but I'm used to that problem!",Lisa
+VD08,venia_us,"Quality=4,Value=3,Price=4",BEACH READY ,"This is my favorite wake up and go dress. It requires absolutey no effort, and looks great on. Even over a bathing suit! ",Talia
+VD09,venia_us,"Quality=4,Value=5,Price=5",LOVE IT,"This is a fantastic dress! My only complaint is it falls just a tad short on my 5'10"" frame, but I'm used to that problem!",Eva
+VD09,venia_us,"Quality=5,Value=4,Price=5",SUPER SOFT,"Love a good t-shirt dress, and this is no exception. Super soft material and washes and wears well. I'm 5'6"" and the length was perfect. ",Ainsley
+VD10,venia_us,"Quality=3,Value=3,Price=3",TOO SHORT,"While I adore the style and detail of this dress, it cannot be worn on its own. Too short and material is see through. ",Marie
+VD10,venia_us,"Quality=4,Value=3,Price=4",MAYBE AS A LAYER,"I agree with other reviewers that this is not what I would qualify as a ""dress"". That said, I love it and layer appropriately. ",Elizabeth
+VD11,venia_us,"Quality=5,Value=4,Price=4",THIS DRESS IS SO FUN,It fits true to size and the fabric lays nicely (not clingy). This dress is extremely lightweight and makes me feel amazing. ,Laura
+VD11,venia_us,"Quality=3,Value=3,Price=3",NOT FOR CURVES,This dress is just not for me. I think maybe I'm just a little too curvy. The pleats do not flatter at all! Disappointed as I loved it online. ,Jaci
+VD12,venia_us,"Quality=4,Value=4,Price=3",VERSATILE DREAM,I love that it only takes a belt to completely transform this dress. I've even used a scarf as a belt for a nice boho touch.,Grace
+VD12,venia_us,"Quality=5,Value=4,Price=4",BEACH READY ,"This is my favorite wake up and go dress. It requires absolutey no effort, and looks great on. Even over a bathing suit! ",Mia
+VP01,venia_us,"Quality=5,Value=4,Price=5",GREAT FIT,"Love the fit of these! After having them for a while, I would say hang to dry is likely best to maintain color and crispness of pants.",Sarah
+VP01,venia_us,"Quality=3,Value=3,Price=3",FANCY SWEATS,That's the only way I can describe these pants. They're like wearing sweats without people thinking you're wearing sweats. Win!,Sharon
+VP02,venia_us,"Quality=4,Value=3,Price=4",NEXT BEST THING TO PJS,I love that I can go out looking super cute and yet feel like I'm in my pajamas. Seriously the most comfortable pants!,Lisa
+VP02,venia_us,"Quality=5,Value=4,Price=4",SO COMFY,"These are the perfect alternative to sweatpants without losing any of the comfort. I look like I put in so much effort. Shhhh, don't tell! ",Talia
+VP03,venia_us,"Quality=3,Value=3,Price=3",AWESOMELY VERSATILE,"Aside from being ridiculously comfortable, these pants are extremely versatile. I can easily dress them up or down. ",Eva
+VP03,venia_us,"Quality=4,Value=4,Price=3",NEXT BEST THING TO PJS,I love that I can go out looking super cute and yet feel like I'm in my pajamas. Seriously the most comfortable pants!,Ainsley
+VP04,venia_us,"Quality=2,Value=2,Price=3",WAIST BUNCHES,"The waistband ruins these pants. It folds down, and unless your stomach is completely flat, it's going to roll and bunch. ",Marie
+VP04,venia_us,"Quality=5,Value=4,Price=5",PERFECT WITH WEDGES,"These pants have just wide enough of a leg for a cute pair of wedges. They were a little long, so I needed the height anyway!",Elizabeth
+VP05,venia_us,"Quality=3,Value=3,Price=3",NEXT BEST THING TO PJS,I love that I can go out looking super cute and yet feel like I'm in my pajamas. Seriously the most comfortable pants!,Laura
+VP05,venia_us,"Quality=4,Value=3,Price=4",AWESOMELY VERSATILE,"Aside from being ridiculously comfortable, these pants are extremely versatile. I can easily dress them up or down. ",Jaci
+VP06,venia_us,"Quality=5,Value=4,Price=4",PERFECT WITH WEDGES,"These pants have just wide enough of a leg for a cute pair of wedges. They were a little long, so I needed the height anyway!",Grace
+VP06,venia_us,"Quality=3,Value=3,Price=3",SO COMFY,"These are the perfect alternative to sweatpants without losing any of the comfort. I look like I put in so much effort. Shhhh, don't tell! ",Mia
+VP07,venia_us,"Quality=4,Value=4,Price=4",FUNKY IN LOVE,These pants are funky and I love it! Completely unique and unlike anything I have in my wardrobe. Love wearing these.,Sarah
+VP07,venia_us,"Quality=5,Value=4,Price=4",NEXT BEST THING TO PJS,I love that I can go out looking super cute and yet feel like I'm in my pajamas. Seriously the most comfortable pants!,Sharon
+VP08,venia_us,"Quality=5,Value=4,Price=5",GREAT FIT,"Love the fit of these! After having them for a while, I would say hang to dry is likely best to maintain color and crispness of pants.",Lisa
+VP08,venia_us,"Quality=3,Value=3,Price=3",RUN LARGE,Lightweight and fit well. Multi-season. Although I would say not quite true to size and perhaps some vanity sizing.,Talia
+VP09,venia_us,"Quality=4,Value=3,Price=4",BEACH READY ,I purchased these as an essential to my summer wardrobe and they didn't disappoint. Perfect for throwing on over a bikini.,Eva
+VP09,venia_us,"Quality=3,Value=3,Price=4",TOO SHORT,These were too short for my frame. I agree with one of the other reviewers that these would be best as a beach cover up. ,Ainsley
+VP10,venia_us,"Quality=3,Value=3,Price=3",SKIRT ALTERNATIVE,I wear a lot of skirts and it can get boring. I love these shorts because I can dress them up with a cami and blazer.,Marie
+VP10,venia_us,"Quality=4,Value=4,Price=3",FLIRTY FUN,These shorts are so cute! I love the scalloped edges. They're super feminine and still feel sophisticated as well. ,Elizabeth
+VP11,venia_us,"Quality=5,Value=4,Price=4",GORGEOUS DETAIL,These shorts are simply beautiful. The detail is incredible. My biggest problem is the urge to wear them every day. ,Laura
+VP11,venia_us,"Quality=5,Value=4,Price=5",HAND WASH,"The layering on these shorts is beautiful, but also very delicate. I would definitely recommend hand washing and hang dry. ",Jaci
+VP12,venia_us,"Quality=3,Value=3,Price=3",LOVE LOVE LOVE,I just bought these shorts and love them. They're an upgrade from your everyday shorts. Good amount of stretch when you sit.,Grace
+VP12,venia_us,"Quality=4,Value=3,Price=4",SKIRT ALTERNATIVE,I wear a lot of skirts and it can get boring. I love these shorts because I can dress them up with a cami and blazer.,Mia
+VSK01,venia_us,"Quality=5,Value=4,Price=4",GREAT FEATURES,I love the long waistband and fullness of this skirt. It's perfect for those days when you're feeling a bit bloated. Camouflages my belly.,Sarah
+VSK01,venia_us,"Quality=3,Value=3,Price=3",EXCEPTIONAL QUALITY,"The quality of this skirt is exceptional. It is lined, the material is soft and fluid, and the color is fabulous. Maybe a hair too long. ",Sharon
+VSK02,venia_us,"Quality=4,Value=4,Price=3",FUN TO WEAR,This is an interesting skirt. The cut is almost like a trumpet. Fitted through the hip and flares at the knee. It's fun to wear!,Lisa
+VSK02,venia_us,"Quality=3,Value=3,Price=3",NICE SKIRT BAD FIT,"Such an unflattering fit. If you are tall and skinny, may not be an issue but it wasn't a figure flattering look. Sadly, returned it.",Talia
+VSK03,venia_us,"Quality=5,Value=5,Price=5",FITS LIKE BUTTER,"This skirt fits like butter. The lines are so smooth, even in places where I'm not! It is so flattering. Definitely my new favorite.",Eva
+VSK03,venia_us,"Quality=4,Value=4,Price=4",EXCEPTIONAL QUALITY,"The quality of this skirt is exceptional. It is lined, the material is soft and fluid, and the color is fabulous. Maybe a hair too long. ",Ainsley
+VSK04,venia_us,"Quality=2,Value=3,Price=2",SAD TO RETURN,"I loved the pattern and style of the skirt, but it was not straight cut as it appeared on the model. It was cut for someone much curvier.",Marie
+VSK04,venia_us,"Quality=2,Value=2,Price=3",WAIST BUNCHES,"The waistband ruins this skirt. It folds down, and unless your stomach is completely flat, it's going to roll and bunch. ",Elizabeth
+VSK05,venia_us,"Quality=5,Value=4,Price=5",EXCEPTIONAL QUALITY,"The quality of this skirt is exceptional. It is lined, the material is soft and fluid, and the color is fabulous. Maybe a hair too long. ",Laura
+VSK05,venia_us,"Quality=3,Value=3,Price=3",FITS LIKE BUTTER,"This skirt fits like butter. The lines are so smooth, even in places where I'm not! It is so flattering. Definitely my new favorite.",Jaci
+VSK06,venia_us,"Quality=4,Value=3,Price=4",FITS LIKE BUTTER,"This skirt fits like butter. The lines are so smooth, even in places where I'm not! It is so flattering. Definitely my new favorite.",Grace
+VSK06,venia_us,"Quality=5,Value=4,Price=4",EXCEPTIONAL QUALITY,"The quality of this skirt is exceptional. It is lined, the material is soft and fluid, and the color is fabulous. Maybe a hair too long. ",Mia
+VSK07,venia_us,"Quality=2,Value=3,Price=3",RETURNING,I missed the length of the inside slip when I viewed this skirt online. It hits above the knee while the skirt is ankle length. Weird. ,Sarah
+VSK07,venia_us,"Quality=4,Value=4,Price=3",GREAT FOR WORK,"This skirt has kind of a ""peekaboo"" feature where the internal slip is much shorter than the skirt. Fun to wear and work appropriate. ",Sharon
+VSK08,venia_us,"Quality=5,Value=4,Price=4",TOO SHORT FOR WORK,"I love this skirt because I can dress it down with a tee or cami, or dress it up with a blazer. It might be a smidge too short for work though. ",Lisa
+VSK08,venia_us,"Quality=5,Value=4,Price=5",SLEEK LINES,"Love it! Fabric is gorgeous, beautifully handled, fit is sleek, unusual elegant look. Does not add weight to my pear shape.",Talia
+VSK09,venia_us,"Quality=2,Value=3,Price=3",NOT FLATTERING,This skirt is not flattering at all. Falls weird over the hip and makes me look much wider than I am. Will be returning.,Eva
+VSK09,venia_us,"Quality=4,Value=3,Price=4",UNIQUE DESIGN,I've never seen a skirt quite like this one before. It's kinda funky but I like it. The leg openings definitely help with walking. ,Ainsley
+VSK10,venia_us,"Quality=5,Value=4,Price=4",PERFECT FOR WORK,"This is such a great purchase and a must have for any working professional. I love the look, the feel, and the length of the skirt.",Marie
+VSK10,venia_us,"Quality=2,Value=3,Price=3",NICE SKIRT BAD FIT,"Such an unflattering fit. If you are tall and skinny, may not be an issue but it wasn't a figure flattering look. Sadly, returned it.",Elizabeth
+VSK11,venia_us,"Quality=4,Value=4,Price=3",PERFECT FOR WORK,"This is such a great purchase and a must have for any working professional. I love the look, the feel, and the length of the skirt.",Laura
+VSK11,venia_us,"Quality=5,Value=4,Price=4",ADORABLE,"This skirt is so cute and playful. Add a basic tee or tank for a casual look, or a blouse or blazer for work. I love it!",Jaci
+VSK12,venia_us,"Quality=5,Value=4,Price=5",ADORABLE,"This skirt is so cute and playful. Add a basic tee or tank for a casual look, or a blouse or blazer for work. I love it!",Grace
+VSK12,venia_us,"Quality=4,Value=4,Price=3",SLEEK LINES,"Love it! Fabric is gorgeous, beautifully handled, fit is sleek, unusual elegant look. Does not add weight to my pear shape.",Mia
+VSW01,venia_us,"Quality=4,Value=3,Price=4",SO SOFT AND COZY,"I wanted a cozy cardigan and found this one. I absolutely love it! The side pockets are a bonus, and the length is perfect.",Sarah
+VSW01,venia_us,"Quality=5,Value=4,Price=4",WEEKEND FAV,"The perfect throw on and chill sweater. Soft material. Loose, comfy fit. And great length for over leggings. ",Sharon
+VSW02,venia_us,"Quality=2,Value=3,Price=3",JUST WEIRD,"There were several things off on this sweater. The length hit in an awkward spot on my hip, and the arm length was off. ",Lisa
+VSW02,venia_us,"Quality=2,Value=2,Price=3",SNAGS EASILY,This sweater has great detail but every time I wear it I wind up caught on something. The open weave is not optimal.,Talia
+VSW03,venia_us,"Quality=5,Value=4,Price=4",GREAT COLOR OPTIONS,I love the weight and feel of this sweater. Nice for layering. Fantastic colors for spring. I couldn't decide so bought two!,Eva
+VSW03,venia_us,"Quality=5,Value=4,Price=5",WEEKEND FAV,The perfect throw on and chill sweater. Soft material. Arm stops at the elbow. And great length for over leggings. ,Ainsley
+VSW04,venia_us,"Quality=4,Value=4,Price=3",SO SOFT AND COZY,"I wanted a cozy cardigan and found this one. I absolutely love it! The side pockets are a bonus, and the length is perfect.",Marie
+VSW04,venia_us,"Quality=4,Value=3,Price=4",GREAT STAPLE,"This is an excellent staple for casual or work. The Peach is beautiful, the cut is classic, and the sleeve is long enough. Quality piece!",Elizabeth
+VSW05,venia_us,"Quality=5,Value=4,Price=4",CUTE!,"Lovely lightweight sweater. I bought a small in the Lily and it fits true to size. A good length, not too long, not too short.",Laura
+VSW05,venia_us,"Quality=5,Value=4,Price=3",SO BEACHY,I love this sweater for layering on vacation. It is the perfect weight and super comfy. I wear it even when I want to feel close to the beach!,Jaci
+VSW06,venia_us,"Quality=4,Value=4,Price=3",SO SOFT AND COZY,"I wanted a cozy cardigan and found this one. I absolutely love it! The hood is a bonus, and the length is perfect.",Grace
+VSW06,venia_us,"Quality=5,Value=4,Price=4",PERFECT FOR TRAVEL,I travel for work and am always looking for easy layers for cold plane rides. The hood is a nice bonus when I want to grab a nap!,Mia
+VSW07,venia_us,"Quality=5,Value=4,Price=5",GREAT COLOR OPTIONS,I love the weight and feel of this sweater. Nice for layering. Fantastic colors for spring. I couldn't decide so bought two!,Sarah
+VSW07,venia_us,"Quality=4,Value=4,Price=3",GREAT STAPLE,"This is an excellent staple for casual or work. The Latte is beautiful, the cut is classic, and the sleeve is long enough. Quality piece!",Sharon
+VSW08,venia_us,"Quality=4,Value=3,Price=4",GREAT COLOR OPTIONS,I love the weight and feel of this sweater. Nice for layering. Fantastic colors for spring. I couldn't decide so bought two!,Lisa
+VSW08,venia_us,"Quality=5,Value=4,Price=4",SHOW STOPPER,"I bought this beautifully made sweater and am thrilled at the fit, the softness of the fabric, and the beautiful Lilac color.",Talia
+VSW09,venia_us,"Quality=4,Value=4,Price=3",SO SOFT AND COZY,"I wanted a cozy cardigan and found this one. I absolutely love it! The side pockets are a bonus, and the length is perfect.",Eva
+VSW09,venia_us,"Quality=4,Value=4,Price=3",GREAT STAPLE,"This is an excellent staple for casual or work. The Rain is beautiful, the cut is classic, and the sleeve is long enough. Quality piece!",Ainsley
+VSW10,venia_us,"Quality=5,Value=4,Price=4",CUTE!,"Lovely lightweight sweater. I bought a small in the Lily and it fits true to size. A good length, not too long, not too short.",Marie
+VSW10,venia_us,"Quality=5,Value=4,Price=5",SHOW STOPPER,"I bought this beautifully made sweater and am thrilled at the fit, the softness of the fabric, and the beautiful Mint color.",Elizabeth
+VSW11,venia_us,"Quality=3,Value=3,Price=3",GREAT COLOR OPTIONS,I love the weight and feel of this sweater. Nice for layering. Fantastic colors for spring. I couldn't decide so bought two!,Laura
+VSW11,venia_us,"Quality=4,Value=3,Price=4",WEEKEND FAV,The perfect throw on and chill sweater. Soft material. Cute front pockets. And great length for over leggings. ,Jaci
+VSW12,venia_us,"Quality=2,Value=2,Price=3",JUST WEIRD,"There were several things off on this sweater. The length hit in an awkward spot on my hip, and the shoulders seemed too large. ",Grace
+VSW12,venia_us,"Quality=4,Value=4,Price=4",GORGEOUS BACK,I didn't think there was anything particularly special about this sweater until I saw the back. It's beautiful! So many compliments. ,Mia
+VT01,venia_us,"Quality=4,Value=4,Price=4",JUST BEAUTIFUL,Absolutely fell in love with this blouse. It's elegant and feels very comfortable. I bought the Large and fits perfectly. Highly recommend.,Sarah
+VT01,venia_us,"Quality=4,Value=4,Price=4",WOULD'VE BEEN A 5,"This top is gorgeously designed and super feminine. But, it is very lightweight and see-through. Requires a cami or additional layer. ",Sharon
+VT02,venia_us,"Quality=5,Value=4,Price=5",VERSATILE BLOUSE,"This looks fantastic under a sweater, blazer or cardigan. Pretty own its own, too. Nice fabric that can be worn year round. ",Lisa
+VT02,venia_us,"Quality=4,Value=4,Price=4",WOULD'VE BEEN A 5,"This top is gorgeously designed and super feminine. But, it is very lightweight and see-through. Requires a cami or additional layer. ",Talia
+VT03,venia_us,"Quality=4,Value=3,Price=4",DRESS UP OR DOWN,This tank top is a wardrobe essential. I wear it regularly with yoga pants and can easily dress it up with accessories.,Eva
+VT03,venia_us,"Quality=5,Value=4,Price=4",FIRST DATE MATERIAL,This is a happy girl! Just what I was looking for a first date. Love the fit. The small fit perfectly. True to size. HIghly recommend. ,Ainsley
+VT04,venia_us,"Quality=3,Value=3,Price=3",FLIRTY AND FUN,So excited about this top! I got it for a upcoming trip to the islands can't wait to wear it. The open back is sexy without showing too much skin.,Marie
+VT04,venia_us,"Quality=4,Value=4,Price=3",GORGEOUS DRAPE,"Absolutely love the drape of this top. The fabric is not see through either, which lets me really show off the low back.",Elizabeth
+VT05,venia_us,"Quality=5,Value=4,Price=4",FLIRTY AND FUN,So excited about this top! I got it for an upcoming trip and can't wait to wear it. The open back is sexy without showing too much skin.,Laura
+VT05,venia_us,"Quality=2,Value=3,Price=3",AWKWARD FIT,"I wanted to love this top. But it's see through in the front, in addition to the open back. So something must be worn under.",Jaci
+VT06,venia_us,"Quality=3,Value=3,Price=3",VERSATILE BLOUSE,"This looks fantastic under a sweater, blazer or cardigan. Pretty own its own, too. Nice fabric that can be worn year round. ",Grace
+VT06,venia_us,"Quality=4,Value=3,Price=4",PERFECT FOR SPRING,"This blouse is perfect for spring. I wasn't sure how I felt about the lace detail at first, but I think it adds some interesting texture.",Mia
+VT07,venia_us,"Quality=3,Value=4,Price=4",RUNS LARGE,"I am typically a M in this brand, and it was swimming on me. But I love it so returning and getting a S.",Sarah
+VT07,venia_us,"Quality=4,Value=4,Price=3",VERSATILE BLOUSE,"This looks fantastic under a sweater, blazer or cardigan. Pretty own its own, too. Nice fabric that can be worn year round. ",Sharon
+VT08,venia_us,"Quality=4,Value=4,Price=3",PERFECT FOR SPRING,"This blouse is perfect for spring. I wasn't sure how I felt about the placement of the front pocket detail at first, but now I really like it.",Lisa
+VT08,venia_us,"Quality=4,Value=4,Price=4",WOULD'VE BEEN A 5,"This top is gorgeously designed and super feminine. But, it is very lightweight and see-through. Requires a cami or additional layer. ",Talia
+VT09,venia_us,"Quality=5,Value=4,Price=5",FLIRTY AND FUN,So excited about this top! I got it for an upcoming trip and can't wait to wear it. The open lace detail is sexy without showing too much skin.,Eva
+VT09,venia_us,"Quality=4,Value=4,Price=4",SEXY AND CUTE,This is a happy girl! Just what I was looking for a first date. Sexy and love the fit. The small fit perfectly. True to size. ,Ainsley
+VT10,venia_us,"Quality=4,Value=3,Price=4",SO EASYGOING,This is the perfect top for when I want to look cute but don't want to put in the effort! It has an easy fit that hangs really well. ,Marie
+VT10,venia_us,"Quality=3,Value=4,Price=4",RUNS LARGE,"I am typically a M in this brand, and it was swimming on me. But I love it so returning and getting a S.",Elizabeth
+VT11,venia_us,"Quality=4,Value=4,Price=3",DRESS UP OR DOWN,This tank top is a wardrobe essential. I wear it regularly with basic shorts and can easily dress it up with accessories.,Laura
+VT11,venia_us,"Quality=5,Value=4,Price=4",FIRST DATE MATERIAL,This is a happy girl! Just what I was looking for a first date. Love the fit. The small fit perfectly. True to size. HIghly recommend. ,Jaci
+VT12,venia_us,"Quality=5,Value=4,Price=4",FABRIC IS SO SOFT,"This looks fantastic under a sweater, blazer or cardigan. Pretty own its own, too. Nice fabric that can be worn year round. ",Grace
+VT12,venia_us,"Quality=2,Value=3,Price=3",TOO PLAIN FOR ME,"I thought I'd like this top as a layering piece, but I think that it's just too basic for me. Fabric is too much like a t-shirt.",Mia
