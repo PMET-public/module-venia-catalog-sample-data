@@ -153,10 +153,9 @@ class Review
                 }
                 $storeId = $this->storeManager->load($row['store'])->getStoreId();
 
-                $startStamp = strtotime('01-01-2017');
-                $endStamp = strtotime('31-03-2017');
-                $createdDate= mt_rand($startStamp,$endStamp);
-                $review->setCreatedAt('2017-01-01');
+                $review->save();
+                //set random review date within 60 days of install
+                $review->setCreatedAt(date('Y-m-d', strtotime( '-'.mt_rand(0,60).' days')));
                 $review->save();
                 $ratingList = explode(",",$row['rating']);
                 foreach($ratingList as $rating){
