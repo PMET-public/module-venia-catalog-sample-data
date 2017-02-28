@@ -72,6 +72,10 @@ class Installer implements Setup\SampleData\InstallerInterface
      * @var \MagentoEse\VeniaCatalogSampleData\Model\Review
      */
     protected $review;
+    /**
+     * @var \MagentoEse\VeniaCatalogSampleData\Model\Video
+     */
+    protected $video;
 
     /**
      * @param \MagentoEse\VeniaCatalogSampleData\Model\Category $categorySetup
@@ -84,6 +88,7 @@ class Installer implements Setup\SampleData\InstallerInterface
      * @param \Magento\SalesRuleSampleData\Model\Rule $salesRule
      * @param \MagentoEse\VeniaCatalogSampleData\Model\Upsells $upsells
      * @param \MagentoEse\VeniaCatalogSampleData\Model\Review $review
+     * @param \MagentoEse\VeniaCatalogSampleData\Model\Video $video
      */
 
 
@@ -97,7 +102,8 @@ class Installer implements Setup\SampleData\InstallerInterface
         \Magento\CatalogRuleSampleData\Model\Rule $catalogRule,
         \Magento\SalesRuleSampleData\Model\Rule $salesRule,
         \MagentoEse\VeniaCatalogSampleData\Model\Upsells $upsells,
-        \MagentoEse\VeniaCatalogSampleData\Model\Review $review
+        \MagentoEse\VeniaCatalogSampleData\Model\Review $review,
+        \MagentoEse\VeniaCatalogSampleData\Model\Video $video
     ) {
         $this->categorySetup = $categorySetup;
         $this->attributeSetup = $attributeSetup;
@@ -108,6 +114,7 @@ class Installer implements Setup\SampleData\InstallerInterface
         $this->salesRule = $salesRule;
         $this->upsells = $upsells;
         $this->review = $review;
+        $this->video = $video;
         try{
             $state->setAreaCode('adminhtml');
         }
@@ -142,6 +149,8 @@ class Installer implements Setup\SampleData\InstallerInterface
         $this->upsells->install(['MagentoEse_VeniaCatalogSampleData::fixtures/upsells.csv']);
         //add reviews
         $this->review->install(['MagentoEse_VeniaCatalogSampleData::fixtures/reviews.csv']);
+        //add video
+        $this->video->install(['MagentoEse_VeniaCatalogSampleData::fixtures/veniaVideo.csv']);
         //reIndex as MECE redeploy will not automatically reindex
         $this->index->reindexAll();
 

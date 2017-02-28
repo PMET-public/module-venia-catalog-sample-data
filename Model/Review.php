@@ -116,7 +116,6 @@ class Review
      */
     public function install(array $fixtures)
     {
-        //TODO:enable  quantity, value and price for venia store
         foreach ($fixtures as $fileName) {
             $fileName = $this->fixtureManager->getFixture($fileName);
             if (!file_exists($fileName)) {
