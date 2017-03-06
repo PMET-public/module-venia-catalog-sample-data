@@ -89,6 +89,7 @@ class Installer implements Setup\SampleData\InstallerInterface
      * @param \MagentoEse\VeniaCatalogSampleData\Model\Upsells $upsells
      * @param \MagentoEse\VeniaCatalogSampleData\Model\Review $review
      * @param \MagentoEse\VeniaCatalogSampleData\Model\Video $video
+     * @param \Magento\Indexer\Model\Processor $index
      */
 
 
@@ -103,7 +104,8 @@ class Installer implements Setup\SampleData\InstallerInterface
         \Magento\SalesRuleSampleData\Model\Rule $salesRule,
         \MagentoEse\VeniaCatalogSampleData\Model\Upsells $upsells,
         \MagentoEse\VeniaCatalogSampleData\Model\Review $review,
-        \MagentoEse\VeniaCatalogSampleData\Model\Video $video
+        \MagentoEse\VeniaCatalogSampleData\Model\Video $video,
+        \Magento\Indexer\Model\Processor $index
     ) {
         $this->categorySetup = $categorySetup;
         $this->attributeSetup = $attributeSetup;
@@ -115,6 +117,7 @@ class Installer implements Setup\SampleData\InstallerInterface
         $this->upsells = $upsells;
         $this->review = $review;
         $this->video = $video;
+        $this->index = $index;
         try{
             $state->setAreaCode('adminhtml');
         }
