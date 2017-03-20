@@ -76,6 +76,10 @@ class Installer implements Setup\SampleData\InstallerInterface
      * @var \MagentoEse\VeniaCatalogSampleData\Model\Video
      */
     protected $video;
+    /**
+     * @var \MagentoEse\VeniaCatalogSampleData\Model\ProductPosition
+     */
+    protected $productPosition;
 
     /**
      * @param \MagentoEse\VeniaCatalogSampleData\Model\Category $categorySetup
@@ -90,6 +94,7 @@ class Installer implements Setup\SampleData\InstallerInterface
      * @param \MagentoEse\VeniaCatalogSampleData\Model\Review $review
      * @param \MagentoEse\VeniaCatalogSampleData\Model\Video $video
      * @param \Magento\Indexer\Model\Processor $index
+     * @param \MagentoEse\VeniaCatalogSampleData\Model\ProductPosition $productPosition
      */
 
 
@@ -105,7 +110,8 @@ class Installer implements Setup\SampleData\InstallerInterface
         \MagentoEse\VeniaCatalogSampleData\Model\Upsells $upsells,
         \MagentoEse\VeniaCatalogSampleData\Model\Review $review,
         \MagentoEse\VeniaCatalogSampleData\Model\Video $video,
-        \Magento\Indexer\Model\Processor $index
+        \Magento\Indexer\Model\Processor $index,
+        \MagentoEse\VeniaCatalogSampleData\Model\ProductPosition $productPosition
     ) {
         $this->categorySetup = $categorySetup;
         $this->attributeSetup = $attributeSetup;
@@ -118,6 +124,7 @@ class Installer implements Setup\SampleData\InstallerInterface
         $this->review = $review;
         $this->video = $video;
         $this->index = $index;
+        $this->productPosition = $productPosition;
         try{
             $state->setAreaCode('adminhtml');
         }
@@ -137,13 +144,15 @@ class Installer implements Setup\SampleData\InstallerInterface
         //set up text and color swatches
         $this->swatchesSetup->install();
         //add categories
-        $this->categorySetup->install(['MagentoEse_VeniaCatalogSampleData::fixtures/categories.csv']);
+        $this->categorySetup->install(['MagentoEse_VeniaCatalogSampleData::fixtures/categories.csv','MagentoEse_VeniaCatalogSampleData::fixtures/lookBookCategories.csv']);
         //suppress most luma products from venia store
         $this->productSetup->install(['MagentoEse_VeniaCatalogSampleData::fixtures/suppressLumaProductsFromVenia.csv']);
         //suppress luma bundle and downloadable products from venia. These cannot be done via import
         $this->lumaSuppression->install(['MagentoEse_VeniaCatalogSampleData::fixtures/suppressAdditionalLumaProductsFromVenia.csv']);
         //add venia products
         $this->productSetup->install(['MagentoEse_VeniaCatalogSampleData::fixtures/veniaProducts.csv']);
+        //set position of Shop the Look products
+        $this->productPosition->install(['MagentoEse_VeniaCatalogSampleData::fixtures/productPosition.csv']);
         //add catalog promos
         $this->catalogRule->install(['MagentoEse_VeniaCatalogSampleData::fixtures/catalogRules.csv']);
         //add cart promos

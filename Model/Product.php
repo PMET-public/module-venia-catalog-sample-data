@@ -66,6 +66,7 @@ class Product
             print_r($this->importerModel->getLogTrace());
             print_r($this->importerModel->getErrorMessages());
             unset ($_productsArray);
+            unset ($this->importerModel);
         }
 
     }

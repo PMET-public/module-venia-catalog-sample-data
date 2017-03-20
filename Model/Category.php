@@ -42,13 +42,17 @@ class Category
      * @var \Magento\Store\Api\Data\StoreInterfaceFactory
      */
     protected $storeFactory;
-
+    /**
+     * @var \Magento\CMS\Api\BlockRepositoryInterface
+     */
+    protected $blockRepository;
     /**
      * @param SampleDataContext $sampleDataContext
      * @param \Magento\Catalog\Api\Data\CategoryInterfaceFactory $categoryFactory
      * @param \Magento\Catalog\Model\ResourceModel\Category\TreeFactory $resourceCategoryTreeFactory
      * @param \Magento\Store\Model\StoreManagerInterface $storeManager
      * @param \Magento\Store\Api\Data\StoreInterfaceFactory $storeFactory
+     * @param \Magento\CMS\Api\BlockRepositoryInterface $blockRepository
      */
 
 
@@ -57,7 +61,8 @@ class Category
         \Magento\Catalog\Api\Data\CategoryInterfaceFactory $categoryFactory,
         \Magento\Catalog\Model\ResourceModel\Category\TreeFactory $resourceCategoryTreeFactory,
         \Magento\Store\Model\StoreManagerInterface $storeManager,
-        \Magento\Store\Api\Data\StoreInterfaceFactory $storeFactory
+        \Magento\Store\Api\Data\StoreInterfaceFactory $storeFactory,
+        \Magento\CMS\Api\BlockRepositoryInterface $blockRepository
     ) {
         $this->fixtureManager = $sampleDataContext->getFixtureManager();
         $this->csvReader = $sampleDataContext->getCsvReader();
@@ -65,6 +70,7 @@ class Category
         $this->resourceCategoryTreeFactory = $resourceCategoryTreeFactory;
         $this->storeManager = $storeManager;
         $this->storeFactory = $storeFactory;
+        $this->blockRepository = $blockRepository;
     }
 
     /**
@@ -102,10 +108,20 @@ class Category
             'display_mode',
             'page_layout',
             'custom_layout_update',
+            'look_book_main_image',
+            'display_mode',
+            'landing_page'
         ];
 
         foreach ($additionalAttributes as $categoryAttribute) {
             if (!empty($row[$categoryAttribute])) {
+                if($categoryAttribute=='landing_page'){
+                    try {
+                        $row[$categoryAttribute] = $this->blockRepository->getById($row[$categoryAttribute])->getId();
+                    }catch(\Exception $e){
+                        //ignore if block doesn't exist
+                    }
+                }
                 $attributeData = [$categoryAttribute => $row[$categoryAttribute]];
                 $category->addData($attributeData);
             }

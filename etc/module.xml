@@ -17,6 +17,7 @@
         <module name="MagentoEse_VeniaSetup"/>
         <module name="Magento_CatalogRuleSampleData"/>
         <module name="Magento_SalesRuleSampleData"/>
+        <module name="MagentoEse_LookBook"/>
     </sequence>
     </module>
 </config>
