@@ -18,6 +18,7 @@
         <module name="Magento_CatalogRuleSampleData"/>
         <module name="Magento_SalesRuleSampleData"/>
         <module name="MagentoEse_LookBook"/>
+        <module name="Magento_Cms"/>
     </sequence>
     </module>
 </config>
