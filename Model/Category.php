@@ -110,7 +110,7 @@ class Category
             'custom_layout_update',
             'look_book_main_image',
             'display_mode',
-            'landing_page'
+            'description'
         ];
 
         foreach ($additionalAttributes as $categoryAttribute) {

@@ -1,8 +1,8 @@
-name,url_key,path,active,is_anchor,include_in_menu,position,display_mode,custom_layout_update,skus,look_book_main_image,display_mode,landing_page
-Shop The Look,shop-the-look,,1,0,1,5,,,,,PAGE,footer_links_block
-Collection 1,collection-1,Shop The Look,1,0,0,1,,,"VD04,VA10,VA11",bee.jpg,,
-Collection 2,collection-2,Shop The Look,1,0,0,2,,,"VD06,VA12,VA22",bee.jpg,,
-Collection 3,collection-3,Shop The Look,1,0,0,3,,,"VSK08,VSW09,VA13",bee.jpg,,
-Collection 4,collection-4,Shop The Look,1,0,0,4,,,"VSW05,VP04,VA19",bee.jpg,,
-Collection 5,collection-5,Shop The Look,1,0,0,5,,,"VT11,VP05,VA15",bee.jpg,,
-Collection 6,Collection-6,Shop The Look,1,0,0,6,,,"VT10,VA20,VA16",bee.jpg,,
+name,url_key,path,active,is_anchor,include_in_menu,position,custom_layout_update,skus,look_book_main_image,display_mode,page_layout,description
+Shop The Look,shop-the-look,,1,0,1,5,"<update handle=""lookbook_look_index""/>",,,PAGE,1column,
+Timeless Sophistication,timeless-sophistication,Shop The Look,1,0,0,1,,"VD04,VA10,VA11",timeless.jpg,,,FROM CASUAL TO BOHEMIAN CHIC
+Retire your LBD,retire-your-lbd,Shop The Look,1,0,0,2,,"VD06,VA12,VA22",retirelbd.jpg,,,NEW SOPHISTICATION. CLASSIC STYLE.
+Carefree Days,carefree-days,Shop The Look,1,0,0,3,,"VSK08,VSW09,VA13",carefree.jpg,,,LIGHTWEIGHT & FUN LAYERING OPTIONS
+Perfectly Beachy,perfectly-beachy,Shop The Look,1,0,0,4,,"VSW05,VP04,VA19",beachy.jpg,,,SOFT FABRICS AND SUBTLE LINES
+Minimalist Sensibility,minimalist-sensibility ,Shop The Look,1,0,0,5,,"VT11,VP05,VA15",minimalist.jpg,,,KEEPING IT COOL AND CASUAL
+Outside the Lines,outside-the-ines,Shop The Look,1,0,0,6,,"VT10,VA20,VA16",outside.jpg,,,A NEW TAKE ON A CLASSIC STAPLE
