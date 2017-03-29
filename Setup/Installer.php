@@ -148,7 +148,7 @@ class Installer implements Setup\SampleData\InstallerInterface
         //suppress most luma products from venia store
         $this->productSetup->install(['MagentoEse_VeniaCatalogSampleData::fixtures/suppressLumaProductsFromVenia.csv']);
         //suppress luma bundle and downloadable products from venia. These cannot be done via import
-        $this->lumaSuppression->install(['MagentoEse_VeniaCatalogSampleData::fixtures/suppressAdditionalLumaProductsFromVenia.csv']);
+        //$this->lumaSuppression->install(['MagentoEse_VeniaCatalogSampleData::fixtures/suppressAdditionalLumaProductsFromVenia.csv']);
         //add venia products
         $this->productSetup->install(['MagentoEse_VeniaCatalogSampleData::fixtures/veniaProducts.csv']);
         //set position of Shop the Look products
