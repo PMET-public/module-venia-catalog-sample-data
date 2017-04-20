@@ -141,30 +141,40 @@ class Installer implements Setup\SampleData\InstallerInterface
     {
         //add attributes
         $this->attributeSetup->install(['MagentoEse_VeniaCatalogSampleData::fixtures/attributes.csv']);
+        echo "att\n";
         //set up text and color swatches
         $this->swatchesSetup->install();
+        echo "sw\n";
         //add categories
-        $this->categorySetup->install(['MagentoEse_VeniaCatalogSampleData::fixtures/categories.csv','MagentoEse_VeniaCatalogSampleData::fixtures/lookBookCategories.csv']);
+        //$this->categorySetup->install(['MagentoEse_VeniaCatalogSampleData::fixtures/categories.csv','MagentoEse_VeniaCatalogSampleData::fixtures/lookBookCategories.csv']);
         //suppress most luma products from venia store
-        $this->productSetup->install(['MagentoEse_VeniaCatalogSampleData::fixtures/suppressLumaProductsFromVenia.csv']);
+        //$this->productSetup->install(['MagentoEse_VeniaCatalogSampleData::fixtures/suppressLumaProductsFromVenia.csv']);
+        //echo "\n";
         //suppress luma bundle and downloadable products from venia. These cannot be done via import
         //$this->lumaSuppression->install(['MagentoEse_VeniaCatalogSampleData::fixtures/suppressAdditionalLumaProductsFromVenia.csv']);
         //add venia products
         $this->productSetup->install(['MagentoEse_VeniaCatalogSampleData::fixtures/veniaProducts.csv']);
+        echo "prod\n";
         //set position of Shop the Look products
         $this->productPosition->install(['MagentoEse_VeniaCatalogSampleData::fixtures/productPosition.csv']);
+        echo "stl\n";
         //add catalog promos
         $this->catalogRule->install(['MagentoEse_VeniaCatalogSampleData::fixtures/catalogRules.csv']);
+        echo "catpromo\n";
         //add cart promos
         $this->salesRule->install(['MagentoEse_VeniaCatalogSampleData::fixtures/salesRules.csv']);
+        echo "cart\n";
         //add upsells
         $this->upsells->install(['MagentoEse_VeniaCatalogSampleData::fixtures/upsells.csv']);
+        echo "upsell\n";
         //add reviews
         $this->review->install(['MagentoEse_VeniaCatalogSampleData::fixtures/reviews.csv']);
+        echo "review\n";
         //add video
         $this->video->install(['MagentoEse_VeniaCatalogSampleData::fixtures/veniaVideo.csv']);
+        echo "vid\n";
         //reIndex as MECE redeploy will not automatically reindex
-        $this->index->reindexAll();
+        //$this->index->reindexAll();
 
     }
 }
