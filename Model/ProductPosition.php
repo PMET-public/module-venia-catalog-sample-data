@@ -55,7 +55,7 @@ class ProductPosition
         \Magento\Framework\ObjectManagerInterface $objectManager,
         \Magento\Framework\App\ResourceConnection $resourceConnection,
         \Magento\Catalog\Model\ProductFactory $productFactory,
-        \Magento\Catalog\Model\ResourceModel\Category\Collection $categoryCollection
+        \Magento\Catalog\Model\ResourceModel\Category\CollectionFactory $categoryCollection
     ) {
         $this->fixtureManager = $sampleDataContext->getFixtureManager();
         $this->csvReader = $sampleDataContext->getCsvReader();
@@ -119,7 +119,8 @@ class ProductPosition
 
     protected function _initCategories()
     {
-        $collection = $this->categoryCollection->addNameToResult();
+        $collection = $this->categoryCollection->create();
+        $collection->addNameToResult();
         $categories = array();
         $categoriesWithRoots = array();
         foreach ($collection as $category) {
