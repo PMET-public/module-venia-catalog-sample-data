@@ -90,6 +90,11 @@ class Video
                     "value" => $row['image']
 
                 ]);
+                //INSERT INTO `catalog_product_entity_media_gallery` (`attribute_id`, `value`, `media_type`) VALUES ('90', '/V/D/VD11-LY_main.jpg', 'external-video')
+
+                $this->galleryResource->bindValueToEntity($id, $productId);
+                // INSERT INTO `catalog_product_entity_media_gallery_value_to_entity` (`value_id`,`row_id`) VALUES ('5200', '3190') ON DUPLICATE KEY UPDATE `value_id` = VALUES(`value_id`), `row_id` = VALUES(`row_id`)
+
 
                 $this->galleryResource->insertGalleryValueInStore([
                     'value_id' => $id,
@@ -98,13 +103,18 @@ class Video
                     'label' => 'Video',
                     'position' => 4
                 ]);
+                //INSERT INTO `catalog_product_entity_media_gallery_value` (`value_id`, `store_id`, `row_id`, `label`, `position`) VALUES ('5200', '0', '3190', 'Video', '4')
+
+
                 $this->videoResourceModel->insertOnDuplicate([
                     "value_id" => $id,
                     "store_id" => \Magento\Store\Model\Store::DEFAULT_STORE_ID,
                     "url" => $row['video'],
                     "title" => $row['name']
                 ]);
-                $this->galleryResource->bindValueToEntity($id, $productId);
+                //INSERT INTO `catalog_product_entity_media_gallery_value_video` (`value_id`,`store_id`,`url`,`title`) VALUES ('5200', '0', 'https://vimeo.com/196467074', 'Athena Tank Dress') ON DUPLICATE KEY UPDATE `value_id` = VALUES(`value_id`), `store_id` = VALUES(`store_id`), `url` = VALUES(`url`), `title` = VALUES(`title`)
+
+
             }
         }
 
