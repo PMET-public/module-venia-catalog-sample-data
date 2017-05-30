@@ -173,7 +173,7 @@ class Installer implements Setup\SampleData\InstallerInterface
         //add video
         //$this->video->install(['MagentoEse_VeniaCatalogSampleData::fixtures/veniaVideo.csv']);
         //reIndex as MECE redeploy will not automatically reindex
-        //$this->index->reindexAll();
+        $this->index->reindexAll();
 
     }
 }
