@@ -44,11 +44,17 @@ class Category
     protected $storeFactory;
 
     /**
+     * @var \Magento\Cms\Api\Data\BlockInterfaceFactory
+     */
+    protected $blockFactory;
+
+    /**
      * @param SampleDataContext $sampleDataContext
      * @param \Magento\Catalog\Api\Data\CategoryInterfaceFactory $categoryFactory
      * @param \Magento\Catalog\Model\ResourceModel\Category\TreeFactory $resourceCategoryTreeFactory
      * @param \Magento\Store\Model\StoreManagerInterface $storeManager
      * @param \Magento\Store\Api\Data\StoreInterfaceFactory $storeFactory
+     * @param \Magento\Cms\Api\Data\BlockInterfaceFactory $blockFactory
 
      */
 
@@ -58,7 +64,8 @@ class Category
         \Magento\Catalog\Api\Data\CategoryInterfaceFactory $categoryFactory,
         \Magento\Catalog\Model\ResourceModel\Category\TreeFactory $resourceCategoryTreeFactory,
         \Magento\Store\Model\StoreManagerInterface $storeManager,
-        \Magento\Store\Api\Data\StoreInterfaceFactory $storeFactory
+        \Magento\Store\Api\Data\StoreInterfaceFactory $storeFactory,
+        \Magento\Cms\Api\Data\BlockInterfaceFactory $blockFactory
     ) {
         $this->fixtureManager = $sampleDataContext->getFixtureManager();
         $this->csvReader = $sampleDataContext->getCsvReader();
@@ -66,6 +73,7 @@ class Category
         $this->resourceCategoryTreeFactory = $resourceCategoryTreeFactory;
         $this->storeManager = $storeManager;
         $this->storeFactory = $storeFactory;
+        $this->blockFactory = $blockFactory;
     }
 
     /**
@@ -104,13 +112,17 @@ class Category
             'page_layout',
             'custom_layout_update',
             'look_book_main_image',
-            'display_mode',
-            'description'
+            'description',
+            'landing_page'
         ];
 
         foreach ($additionalAttributes as $categoryAttribute) {
             if (!empty($row[$categoryAttribute])) {
-                $attributeData = [$categoryAttribute => $row[$categoryAttribute]];
+                if($categoryAttribute == 'landing_page'){
+                    $attributeData = [$categoryAttribute => $this->getCmsBlockId($row[$categoryAttribute])];
+                }else {
+                    $attributeData = [$categoryAttribute => $row[$categoryAttribute]];
+                }
                 $category->addData($attributeData);
             }
         }
@@ -209,8 +221,20 @@ class Category
                 ->setPath($parentCategory->getData('path'))
                 ->setAttributeSetId($category->getDefaultAttributeSetId());
             $this->setAdditionalData($row, $category);
+
             $category->save();
+
         }
     }
+    /**
+     * @param string $blockName
+     * @return int
+     */
+    protected function getCmsBlockId($blockName)
+    {
+        $block = $this->blockFactory->create();
+        $block->load($blockName, 'identifier');
+        return $block->getId();
 
+    }
 }

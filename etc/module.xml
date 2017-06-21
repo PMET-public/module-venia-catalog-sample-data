@@ -19,6 +19,7 @@
         <module name="Magento_SalesRuleSampleData"/>
         <module name="MagentoEse_LookBook"/>
         <module name="Magento_Cms"/>
+        <module name="MagentoEse_VeniaCmsSampleData"/>
     </sequence>
     </module>
 </config>
