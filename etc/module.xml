@@ -10,7 +10,7 @@
     <sequence>
         <module name="Magento_Catalog"/>
         <module name="Magento_Eav"/>
-        <module name="FireGento_FastSimpleImport2"/>
+        <module name="FireGento_FastSimpleImport"/>
         <module name="Magento_Eav"/>
         <module name="Magento_Store"/>
         <module name="Magento_Indexer"/>
