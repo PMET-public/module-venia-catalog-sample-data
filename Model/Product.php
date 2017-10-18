@@ -54,7 +54,7 @@ class Product
             foreach ($rows as $row) {
                 $_productsArray[] = array_combine($header, $row);
             }
-            $this->importerModel = $this->objectManager->create('FireGento\FastSimpleImport2\Model\Importer');
+            $this->importerModel = $this->objectManager->create('FireGento\FastSimpleImport\Model\Importer');
             $this->importerModel->setImportImagesFileDir('pub/media/catalog/product');
             $this->importerModel->setValidationStrategy('validation-skip-errors');
             try {
