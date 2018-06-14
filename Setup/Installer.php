@@ -143,30 +143,42 @@ class Installer implements Setup\SampleData\InstallerInterface
     {
         //add attributes
         $this->attributeSetup->install(['MagentoEse_VeniaCatalogSampleData::fixtures/attributes.csv']);
+
         //set up text and color swatches
         $this->swatchesSetup->install();
+
         //add categories
         $this->categorySetup->install(['MagentoEse_VeniaCatalogSampleData::fixtures/categories.csv','MagentoEse_VeniaCatalogSampleData::fixtures/lookBookCategories.csv']);
+
         //suppress most luma products from venia store
         $this->productSetup->install(['MagentoEse_VeniaCatalogSampleData::fixtures/suppressLumaProductsFromVenia.csv']);
+
         //suppress luma bundle and downloadable products from venia. These cannot be done via import
         $this->lumaSuppression->install(['MagentoEse_VeniaCatalogSampleData::fixtures/suppressAdditionalLumaProductsFromVenia.csv']);
+
         //add venia products
         $this->categoryProcessorInit->runInit();
-        $this->productSetup->install(['MagentoEse_VeniaCatalogSampleData::fixtures/veniaProducts.csv']);
+        $this->productSetup->install([
+            'MagentoEse_VeniaCatalogSampleData::fixtures/veniaProducts.csv',
+            'MagentoEse_VeniaCatalogSampleData::fixtures/suppressVeniaProductsFromLuma.csv'
+        ]);
+
         //set position of Shop the Look products
         $this->productPosition->install(['MagentoEse_VeniaCatalogSampleData::fixtures/productPosition.csv']);
+
         //add catalog promos
         $this->catalogRule->install(['MagentoEse_VeniaCatalogSampleData::fixtures/catalogRules.csv']);
+
         //add cart promos
         $this->salesRule->install(['MagentoEse_VeniaCatalogSampleData::fixtures/salesRules.csv']);
+
         //add upsells
         $this->upsells->install(['MagentoEse_VeniaCatalogSampleData::fixtures/upsells.csv']);
+
         //add reviews
         $this->review->install(['MagentoEse_VeniaCatalogSampleData::fixtures/reviews.csv']);
-        //add video
+
         //reIndex as MECE redeploy will not automatically reindex
         $this->index->reindexAll();
-
     }
 }
