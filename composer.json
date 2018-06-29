@@ -3,7 +3,7 @@
     "type": "magento2-module",
     "require": {
         "magento/framework": "*",
-        "firegento/fastsimpleimport": "dev-updated"
+        "firegento/fastsimpleimport": "*"
         },
     "autoload": {
         "files": [
