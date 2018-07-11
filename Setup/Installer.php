@@ -107,28 +107,30 @@ class Installer implements Setup\SampleData\InstallerInterface
         \MagentoEse\VeniaCatalogSampleData\Model\Swatches $swatchesSetup,
         \MagentoEse\VeniaCatalogSampleData\Model\LumaSuppression $lumaSuppression,
         \Magento\Framework\App\State $state,
-        \Magento\CatalogRuleSampleData\Model\Rule $catalogRule,
-        \Magento\SalesRuleSampleData\Model\Rule $salesRule,
-        \MagentoEse\VeniaCatalogSampleData\Model\Upsells $upsells,
+        //*EE only
+        //\Magento\CatalogRuleSampleData\Model\Rule $catalogRule,
+        //\Magento\SalesRuleSampleData\Model\Rule $salesRule,
+        //\MagentoEse\VeniaCatalogSampleData\Model\Upsells $upsells,
         \MagentoEse\VeniaCatalogSampleData\Model\Review $review,
-        \Magento\Indexer\Model\Processor $index,
-        \MagentoEse\VeniaCatalogSampleData\Model\ProductPosition $productPosition,
-        \MagentoEse\InstallationOverrides\Model\CategoryProcessorInit $categoryProcessorInit
+        \Magento\Indexer\Model\Processor $index
+        //\MagentoEse\VeniaCatalogSampleData\Model\ProductPosition $productPosition,
+        //\MagentoEse\InstallationOverrides\Model\CategoryProcessorInit $categoryProcessorInit
     ) {
         $this->categorySetup = $categorySetup;
         $this->attributeSetup = $attributeSetup;
         $this->productSetup = $productSetup;
         $this->swatchesSetup = $swatchesSetup;
         $this->lumaSuppression = $lumaSuppression;
-        $this->catalogRule  = $catalogRule;
-        $this->salesRule = $salesRule;
-        $this->upsells = $upsells;
+        // EE only
+       // $this->catalogRule  = $catalogRule;
+        //$this->salesRule = $salesRule;
+        //$this->upsells = $upsells;
         $this->review = $review;
         $this->index = $index;
-        $this->productPosition = $productPosition;
-        $this->categoryProcessorInit = $categoryProcessorInit;
+        //$this->productPosition = $productPosition;
+        //$this->categoryProcessorInit = $categoryProcessorInit;
         try{
-            $state->setAreaCode('adminhtml');
+            $state->setAreaCode(\Magento\Framework\App\Area::AREA_GLOBAL);
         }
         catch(\Magento\Framework\Exception\LocalizedException $e){
             // left empty
@@ -148,32 +150,29 @@ class Installer implements Setup\SampleData\InstallerInterface
         $this->swatchesSetup->install();
 
         //add categories
-        $this->categorySetup->install(['MagentoEse_VeniaCatalogSampleData::fixtures/categories.csv','MagentoEse_VeniaCatalogSampleData::fixtures/lookBookCategories.csv']);
+        //$this->categorySetup->install(['MagentoEse_VeniaCatalogSampleData::fixtures/categories.csv','MagentoEse_VeniaCatalogSampleData::fixtures/lookBookCategories.csv']);
 
         //suppress most luma products from venia store
-        $this->productSetup->install(['MagentoEse_VeniaCatalogSampleData::fixtures/suppressLumaProductsFromVenia.csv']);
+       // $this->productSetup->install(['MagentoEse_VeniaCatalogSampleData::fixtures/suppressLumaProductsFromVenia.csv']);
 
         //suppress luma bundle and downloadable products from venia. These cannot be done via import
-        $this->lumaSuppression->install(['MagentoEse_VeniaCatalogSampleData::fixtures/suppressAdditionalLumaProductsFromVenia.csv']);
+        //$this->lumaSuppression->install(['MagentoEse_VeniaCatalogSampleData::fixtures/suppressAdditionalLumaProductsFromVenia.csv']);
 
         //add venia products
-        $this->categoryProcessorInit->runInit();
-        $this->productSetup->install([
-            'MagentoEse_VeniaCatalogSampleData::fixtures/veniaProducts.csv',
-            'MagentoEse_VeniaCatalogSampleData::fixtures/suppressVeniaProductsFromLuma.csv'
-        ]);
+        //$this->categoryProcessorInit->runInit();
+        $this->productSetup->install();
 
         //set position of Shop the Look products
-        $this->productPosition->install(['MagentoEse_VeniaCatalogSampleData::fixtures/productPosition.csv']);
+        //$this->productPosition->install(['MagentoEse_VeniaCatalogSampleData::fixtures/productPosition.csv']);
 
-        //add catalog promos
-        $this->catalogRule->install(['MagentoEse_VeniaCatalogSampleData::fixtures/catalogRules.csv']);
+        //add catalog promos EE ONlY
+        //$this->catalogRule->install(['MagentoEse_VeniaCatalogSampleData::fixtures/catalogRules.csv']);
 
-        //add cart promos
-        $this->salesRule->install(['MagentoEse_VeniaCatalogSampleData::fixtures/salesRules.csv']);
+        //add cart promos EE ONLY
+        //$this->salesRule->install(['MagentoEse_VeniaCatalogSampleData::fixtures/salesRules.csv']);
 
         //add upsells
-        $this->upsells->install(['MagentoEse_VeniaCatalogSampleData::fixtures/upsells.csv']);
+        //$this->upsells->install(['MagentoEse_VeniaCatalogSampleData::fixtures/upsells.csv']);
 
         //add reviews
         $this->review->install(['MagentoEse_VeniaCatalogSampleData::fixtures/reviews.csv']);

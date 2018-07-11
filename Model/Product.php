@@ -1,80 +1,115 @@
 <?php
 /**
- * Copyright © 2016 Magento. All rights reserved.
+ * Copyright © Magento, Inc. All rights reserved.
  * See COPYING.txt for license details.
  */
-namespace MagentoEse\VeniaCatalogSampleData\Model;
+namespace Magentoese\VeniaCatalogSampleData\Model;
 
-use Magento\Framework\Setup\SampleData\Context as SampleDataContext;
+use Magento\Framework\Component\ComponentRegistrar;
+use Magento\Framework\Filesystem\Directory\ReadFactory;
+use Magento\ImportExport\Model\Import;
+use Magento\ImportExport\Model\Import\ErrorProcessing\ProcessingErrorAggregatorInterface;
 
 /**
- * Class Product
- *
- * @SuppressWarnings(PHPMD.CouplingBetweenObjects)
+ * Setup configurable product
  */
 class Product
 {
     /**
-     * @var \Magento\Framework\Setup\SampleData\FixtureManager
+     * @var \Magento\ImportExport\Model\Import
      */
-    protected $fixtureManager;
+    private $importModel;
 
-
-     /**
-     * Product constructor.
-     * @param SampleDataContext $sampleDataContext
-     * @param \Magento\Framework\ObjectManagerInterface $objectManager
+    /**
+     * @var \Magento\ImportExport\Model\Import\Source\CsvFactory
      */
+    private $csvSourceFactory;
 
-    protected $objectManager;
+    /**
+     * @var \Magento\Framework\Filesystem\Directory\ReadFactory
+     */
+    private $readFactory;
+
+    /**
+     * @var \Magento\Indexer\Model\Indexer\CollectionFactory
+     */
+    private $indexerCollectionFactory;
+
+    /**
+     * @var \Magento\Framework\Component\ComponentRegistrar
+     */
+    private $componentRegistrar;
+
+    /**
+     * @param \Magento\Eav\Model\Config $eavConfig
+     * @param \Magento\ImportExport\Model\Import $importModel
+     * @param \Magento\ImportExport\Model\Import\Source\CsvFactory $csvSourceFactory
+     * @param \Magento\Indexer\Model\Indexer\CollectionFactory $indexerCollectionFactory
+     * @param \Magento\Framework\Filesystem\Directory\ReadFactory $readFactory
+     * @param \Magento\Framework\Component\ComponentRegistrar $componentRegistrar
+     */
     public function __construct(
-        SampleDataContext $sampleDataContext,
-        \Magento\Framework\ObjectManagerInterface $objectManager
+        \Magento\Eav\Model\Config $eavConfig,
+        \Magento\ImportExport\Model\Import $importModel,
+        \Magento\ImportExport\Model\Import\Source\CsvFactory $csvSourceFactory,
+        \Magento\Indexer\Model\Indexer\CollectionFactory $indexerCollectionFactory,
+        \Magento\Framework\Filesystem\Directory\ReadFactory $readFactory,
+        \Magento\Framework\Component\ComponentRegistrar $componentRegistrar,
+        \Magento\Framework\App\State $state
     ) {
-        $this->fixtureManager = $sampleDataContext->getFixtureManager();
-        $this->csvReader = $sampleDataContext->getCsvReader();
-        $this->objectManager=$objectManager;
+        $this->eavConfig = $eavConfig;
+        $this->importModel = $importModel;
+        $this->csvSourceFactory = $csvSourceFactory;
+        $this->indexerCollectionFactory = $indexerCollectionFactory;
+        $this->readFactory = $readFactory;
+        $this->componentRegistrar = $componentRegistrar;
+        $state->setAreaCode(\Magento\Framework\App\Area::AREA_GLOBAL);
     }
 
     /**
-     * @param array $productFixtures
-     * @throws \Exception
+     * @inheritdoc
      */
-    public function install(array $productFixtures)
+    public function install()
     {
-        foreach ($productFixtures as $fileName) {
-            $fileName = $this->fixtureManager->getFixture($fileName);
-            if (!file_exists($fileName)) {
-                continue;
-            }
+        $this->eavConfig->clear();
+        $importModel = $this->importModel;
+        $importModel->setData(
+            [
+                'entity' => 'catalog_product',
+                'behavior' => 'append',
+                'import_images_file_dir' => 'vendor/magentoese/module-venia-media-sample-data/catalog/product',
+                Import::FIELD_NAME_VALIDATION_STRATEGY =>
+                    ProcessingErrorAggregatorInterface::VALIDATION_STRATEGY_SKIP_ERRORS
+            ]
+        );
 
-            $rows = $this->csvReader->getData($fileName);
-            $header = array_shift($rows);
+        $source = $this->csvSourceFactory->create(
+            [
+                'file' => 'fixtures/veniaProducts.csv',
+                'directory' => $this->readFactory->create(
+                    $this->componentRegistrar->getPath(ComponentRegistrar::MODULE, 'MagentoEse_VeniaCatalogSampleData')
+                )
+            ]
+        );
 
-            foreach ($rows as $row) {
-                $_productsArray[] = array_combine($header, $row);
-            }
-            $this->importerModel = $this->objectManager->create('FireGento\FastSimpleImport\Model\Importer');
-            $this->importerModel->setImportImagesFileDir('pub/media/catalog/product');
-            $this->importerModel->setValidationStrategy('validation-skip-errors');
-            try {
-                $this->importerModel->processImport($_productsArray);
-            } catch (\Exception $e) {
-                print_r($e->getMessage());
-            }
+        $currentPath = getcwd();
+        chdir(BP);
+        $importModel->validateSource($source);
+        $importModel->importSource();
 
-            print_r($this->importerModel->getLogTrace());
-            print_r($this->importerModel->getErrorMessages());
-            unset ($_productsArray);
-            unset ($this->importerModel);
+        chdir($currentPath);
+
+        $this->eavConfig->clear();
+        $this->reindex();
+    }
+
+    /**
+     * Perform full reindex
+     */
+    private function reindex()
+    {
+        foreach ($this->indexerCollectionFactory->create()->getItems() as $indexer) {
+            $indexer->reindexAll();
         }
-
     }
-
-    public function setFixtures(array $fixtures)
-    {
-        $this->fixtures = $fixtures;
-        return $this;
-    }
-
 }

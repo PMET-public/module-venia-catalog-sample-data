@@ -7,19 +7,11 @@
 -->
 <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Module/etc/module.xsd">
     <module name="MagentoEse_VeniaCatalogSampleData" setup_version="0.0.1">
-    <sequence>
-        <module name="Magento_Catalog"/>
-        <module name="Magento_Eav"/>
-        <module name="FireGento_FastSimpleImport"/>
-        <module name="Magento_Eav"/>
-        <module name="Magento_Store"/>
-        <module name="Magento_Indexer"/>
-        <module name="MagentoEse_VeniaSetup"/>
-        <module name="Magento_CatalogRuleSampleData"/>
-        <module name="Magento_SalesRuleSampleData"/>
-        <module name="MagentoEse_LookBook"/>
-        <module name="Magento_Cms"/>
-        <module name="MagentoEse_VeniaCmsSampleData"/>
-    </sequence>
+        <sequence>
+            <module name="Magento_Catalog"/>
+            <module name="Magento_Eav"/>
+            <module name="Magento_Store"/>
+            <module name="Magento_Indexer"/>
+        </sequence>
     </module>
 </config>

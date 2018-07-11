@@ -19,7 +19,7 @@ class InstallData implements Setup\InstallDataInterface
      */
     protected $installer;
 
-    public function __construct(Setup\SampleData\Executor $executor, Installer $installer)
+    public function __construct(Setup\SampleData\Executor $executor, Installer $installer,\Magento\Framework\App\State $state)
     {
         $this->executor = $executor;
         $this->installer = $installer;
@@ -30,6 +30,7 @@ class InstallData implements Setup\InstallDataInterface
      */
     public function install(Setup\ModuleDataSetupInterface $setup, Setup\ModuleContextInterface $moduleContext)
     {
+        $state->setAreaCode(\Magento\Framework\App\Area::AREA_GLOBAL);
         $this->executor->exec($this->installer);
     }
 }
