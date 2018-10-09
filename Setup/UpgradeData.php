@@ -40,9 +40,7 @@ class UpgradeData implements UpgradeDataInterface
         $setup->startSetup();
         if (version_compare($context->getVersion(), '0.0.2', '<=')) {
             $attribute = $this->productAttributeRepository->get('video_file');
-            $attribute->setIsSearchable('false');
             $attribute->setIsComparable('false');
-            $attribute->setIsVisibleInAdvancedSearch('false');
             $attribute->setIsFilterable(false);
             $attribute->setIsFilterableInSearch(false);
             $this->productAttributeRepository->save($attribute);
