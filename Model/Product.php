@@ -55,7 +55,7 @@ class Product
                 $_productsArray[] = array_combine($header, $row);
             }
             $this->importerModel = $this->objectManager->create('FireGento\FastSimpleImport\Model\Importer');
-            $this->importerModel->setImportImagesFileDir('pub/media/catalog/product');
+            $this->importerModel->setImportImagesFileDir('vendor/magentoese/module-venia-media-sample-data/catalog/product');
             $this->importerModel->setValidationStrategy('validation-skip-errors');
             try {
                 $this->importerModel->processImport($_productsArray);
