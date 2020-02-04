@@ -1,5 +1,5 @@
 name,url_key,path,active,is_anchor,include_in_menu,position,page_layout,display_mode,landing_page,custom_layout_update
-Tops,venia-tops,,1,1,1,1,full-width,PAGE,venia-clp-tops,"<referenceBlock name=""catalog.leftnav"" remove=""true"" /><referenceBlock name=""page.main.title"" remove=""true"" /><referenceBlock name=""catalog.compare.sidebar"" remove=""true""/><referenceBlock name=""view.addto.compare"" remove=""true"" /><referenceBlock name=""view.addto.wishlist"" remove=""true"" />"
+Tops,venia-tops,,1,1,1,1,full-width,PAGE,venia-clp-tops,VeniaCategory
 Blouses & Shirts,venia-blouses,Tops,1,1,1,1,,,,
 Sweaters,venia-sweaters,Tops,1,1,1,2,,,,
 Bottoms,venia-bottoms,,1,1,1,2,,,,
