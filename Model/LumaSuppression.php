@@ -55,7 +55,7 @@ class LumaSuppression
     public function install(array $productFixtures){
 
         //Index needs to be run before setting products in the new store
-        $this->index->reindexAll();
+        //$this->index->reindexAll();
         //get sku,store,visibility from csv
         foreach ($productFixtures as $fileName) {
             $fileName = $this->fixtureManager->getFixture($fileName);
