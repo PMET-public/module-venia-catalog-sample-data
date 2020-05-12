@@ -110,7 +110,7 @@ class Category
             'position',
             'display_mode',
             'page_layout',
-            //'custom_layout_update',
+            'custom_layout_update',
             'look_book_main_image',
             'description',
             'landing_page'
