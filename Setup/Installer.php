@@ -79,7 +79,7 @@ class Installer implements Setup\SampleData\InstallerInterface
     protected $productPosition;
 
     /**
-     * @var \MagentoEse\InstallationOverrides\Model\CategoryProcessorInit
+     //* @var \Magento\CatalogImportExport\Model\Import\Product\CategoryProcessor
      */
     protected $categoryProcessorInit;
 
@@ -96,7 +96,7 @@ class Installer implements Setup\SampleData\InstallerInterface
      * @param \MagentoEse\VeniaCatalogSampleData\Model\Review $review
      * @param \Magento\Indexer\Model\Processor $index
      * @param \MagentoEse\VeniaCatalogSampleData\Model\ProductPosition $productPosition
-     * @param  \MagentoEse\InstallationOverrides\Model\CategoryProcessorInit $categoryProcessorInit
+     * @param \Magento\CatalogImportExport\Model\Import\Product\CategoryProcessor $categoryProcessorInit
      */
 
 
@@ -113,7 +113,7 @@ class Installer implements Setup\SampleData\InstallerInterface
         \MagentoEse\VeniaCatalogSampleData\Model\Review $review,
         \Magento\Indexer\Model\Processor $index,
         \MagentoEse\VeniaCatalogSampleData\Model\ProductPosition $productPosition,
-        \MagentoEse\InstallationOverrides\Model\CategoryProcessorInit $categoryProcessorInit
+        \Magento\CatalogImportExport\Model\Import\Product\CategoryProcessor $categoryProcessorInit
     ) {
         $this->categorySetup = $categorySetup;
         $this->attributeSetup = $attributeSetup;
