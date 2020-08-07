@@ -20,7 +20,7 @@
         <module name="MagentoEse_LookBook"/>
         <module name="Magento_Cms"/>
         <module name="MagentoEse_VeniaCmsSampleData"/>
-        <module name="MagentoEse_ProductImageSwitcher"/>
+        <!--<module name="MagentoEse_ProductImageSwitcher"/>-->
     </sequence>
     </module>
 </config>
