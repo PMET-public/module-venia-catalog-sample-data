@@ -191,8 +191,8 @@ class Installer implements Setup\SampleData\InstallerInterface
         $this->review->install(['MagentoEse_VeniaCatalogSampleData::fixtures/reviews.csv']);
 
         //reIndex as MECE redeploy will not automatically reindex
-        echo "reindex start " . date("h:i:sa")."\n";
-        $this->index->reindexAll();
-        echo "reindex end " . date("h:i:sa")."\n";
+        //echo "reindex start " . date("h:i:sa")."\n";
+        //$this->index->reindexAll();
+        //echo "reindex end " . date("h:i:sa")."\n";
     }
 }
