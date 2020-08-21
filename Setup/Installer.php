@@ -142,21 +142,28 @@ class Installer implements Setup\SampleData\InstallerInterface
     public function install()
     {
         //add attributes
+
+        echo "Add attributes " . date("h:i:sa")."\n";
         $this->attributeSetup->install(['MagentoEse_VeniaCatalogSampleData::fixtures/attributes.csv']);
 
         //set up text and color swatches
+        echo "swatches " . date("h:i:sa")."\n";
         $this->swatchesSetup->install();
 
         //add categories
+        echo "categories " . date("h:i:sa")."\n";
         $this->categorySetup->install(['MagentoEse_VeniaCatalogSampleData::fixtures/categories.csv','MagentoEse_VeniaCatalogSampleData::fixtures/lookBookCategories.csv']);
 
         //suppress most luma products from venia store
+        echo "umpa suppressa " . date("h:i:sa")."\n";
         $this->productSetup->install(['MagentoEse_VeniaCatalogSampleData::fixtures/suppressLumaProductsFromVenia.csv']);
 
         //suppress luma bundle and downloadable products from venia. These cannot be done via import
+        echo "luma bundles" . date("h:i:sa")."\n";
         $this->lumaSuppression->install(['MagentoEse_VeniaCatalogSampleData::fixtures/suppressAdditionalLumaProductsFromVenia.csv']);
 
         //add venia products
+        echo "venia products" . date("h:i:sa")."\n";
         $this->categoryProcessorInit->runInit();
         $this->productSetup->install([
             'MagentoEse_VeniaCatalogSampleData::fixtures/veniaProducts.csv',
@@ -164,21 +171,28 @@ class Installer implements Setup\SampleData\InstallerInterface
         ]);
 
         //set position of Shop the Look products
+        echo "STL " . date("h:i:sa")."\n";
         $this->productPosition->install(['MagentoEse_VeniaCatalogSampleData::fixtures/productPosition.csv']);
 
         //add catalog promos
+        echo "cat promos " . date("h:i:sa")."\n";
         $this->catalogRule->install(['MagentoEse_VeniaCatalogSampleData::fixtures/catalogRules.csv']);
 
         //add cart promos
+        echo "cart promos " . date("h:i:sa")."\n";
         $this->salesRule->install(['MagentoEse_VeniaCatalogSampleData::fixtures/salesRules.csv']);
 
         //add upsells
+        echo "upsells " . date("h:i:sa")."\n";
         $this->upsells->install(['MagentoEse_VeniaCatalogSampleData::fixtures/upsells.csv']);
 
         //add reviews
+        echo "reviews " . date("h:i:sa")."\n";
         $this->review->install(['MagentoEse_VeniaCatalogSampleData::fixtures/reviews.csv']);
 
         //reIndex as MECE redeploy will not automatically reindex
+        echo "reindex start " . date("h:i:sa")."\n";
         $this->index->reindexAll();
+        echo "reindex end " . date("h:i:sa")."\n";
     }
 }
