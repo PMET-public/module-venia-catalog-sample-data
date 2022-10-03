@@ -93,7 +93,10 @@ class ProductPosition
                 foreach($categoryIds as $categoryId) {
                     $product = $this->productFactory->create();
                     $productId = $product->getIdBySku($data['sku']);
-                    $this->updateProductPosition($categoryId,$productId,$data['position']);
+                    if($productId){
+                        $this->updateProductPosition($categoryId,$productId,$data['position']);
+                    }
+                    
                 }
             }
         }
