@@ -151,20 +151,21 @@ class Installer implements Setup\SampleData\InstallerInterface
         $this->categorySetup->install(['MagentoEse_VeniaCatalogSampleData::fixtures/categories.csv','MagentoEse_VeniaCatalogSampleData::fixtures/lookBookCategories.csv']);
 
         //suppress most luma products from venia store
-        $this->productSetup->install(['MagentoEse_VeniaCatalogSampleData::fixtures/suppressLumaProductsFromVenia.csv']);
+        //$this->productSetup->install(['MagentoEse_VeniaCatalogSampleData::fixtures/suppressLumaProductsFromVenia.csv']);
 
         //suppress luma bundle and downloadable products from venia. These cannot be done via import
-        $this->lumaSuppression->install(['MagentoEse_VeniaCatalogSampleData::fixtures/suppressAdditionalLumaProductsFromVenia.csv']);
+        //$this->lumaSuppression->install(['MagentoEse_VeniaCatalogSampleData::fixtures/suppressAdditionalLumaProductsFromVenia.csv']);
 
+        //This section removed and put into MagentoEse_VeniaProductsInstall
         //add venia products
-        $this->categoryProcessorInit->runInit();
-        $this->productSetup->install([
-            'MagentoEse_VeniaCatalogSampleData::fixtures/veniaProducts.csv',
-            'MagentoEse_VeniaCatalogSampleData::fixtures/suppressVeniaProductsFromLuma.csv'
-        ]);
+        // $this->categoryProcessorInit->runInit();
+        // $this->productSetup->install([
+        //     'MagentoEse_VeniaCatalogSampleData::fixtures/veniaProducts.csv',
+        //     'MagentoEse_VeniaCatalogSampleData::fixtures/suppressVeniaProductsFromLuma.csv'
+        // ]);
 
-        //set position of Shop the Look products
-        $this->productPosition->install(['MagentoEse_VeniaCatalogSampleData::fixtures/productPosition.csv']);
+        // //set position of Shop the Look products
+        // $this->productPosition->install(['MagentoEse_VeniaCatalogSampleData::fixtures/productPosition.csv']);
 
         //add catalog promos
         $this->catalogRule->install(['MagentoEse_VeniaCatalogSampleData::fixtures/catalogRules.csv']);
