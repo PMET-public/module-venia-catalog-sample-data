@@ -158,7 +158,7 @@ class Installer implements Setup\SampleData\InstallerInterface
 
         //This section removed and put into MagentoEse_VeniaProductsInstall
         //add venia products
-        // $this->categoryProcessorInit->runInit();
+        $this->categoryProcessorInit->runInit();
         // $this->productSetup->install([
         //     'MagentoEse_VeniaCatalogSampleData::fixtures/veniaProducts.csv',
         //     'MagentoEse_VeniaCatalogSampleData::fixtures/suppressVeniaProductsFromLuma.csv'
