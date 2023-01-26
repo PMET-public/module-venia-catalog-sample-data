@@ -54,9 +54,10 @@ class Product
             foreach ($rows as $row) {
                 $_productsArray[] = array_combine($header, $row);
             }
-            $this->importerModel = $this->objectManager->create('FireGento\FastSimpleImport\Model\Importer');
+            $this->importerModel = $this->objectManager->create('MagentoEse\DataInstall\Model\Import\Importer\Importer');
             $this->importerModel->setImportImagesFileDir('vendor/magentoese/module-venia-media-sample-data/catalog/product');
             $this->importerModel->setValidationStrategy('validation-skip-errors');
+            $this->importerModel->setEntityCode('catalog_product');
             try {
                 $this->importerModel->processImport($_productsArray);
             } catch (\Exception $e) {
