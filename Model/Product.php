@@ -5,6 +5,7 @@
  */
 namespace MagentoEse\VeniaCatalogSampleData\Model;
 
+use Magento\Framework\File\Csv;
 use Magento\Framework\Setup\SampleData\Context as SampleDataContext;
 
 /**
@@ -18,6 +19,24 @@ class Product
      * @var \Magento\Framework\Setup\SampleData\FixtureManager
      */
     protected $fixtureManager;
+
+    /**
+     * 
+     * @var Csv
+     */
+    protected $csvReader;
+
+    /**
+     * 
+     * @var MagentoEse\DataInstall\Model\Import\Importer\Importer
+     */
+    protected $importerModel;
+
+    /**
+     * 
+     * @var array
+     */
+    protected $fixtures;
 
 
      /**

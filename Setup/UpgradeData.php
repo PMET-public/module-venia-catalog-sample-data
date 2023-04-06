@@ -15,7 +15,17 @@ use Magento\Eav\Setup\EavSetup;
 
 class UpgradeData implements UpgradeDataInterface
 {
+    /**
+     * 
+     * @var EavSetup
+     */
+    protected $eavSetup;
 
+    /**
+     * 
+     * @var ProductAttributeRepositoryInterface
+     */
+    protected $productAttributeRepository;
 
     public function __construct(State $state, EavSetup $eavSetup, ProductAttributeRepositoryInterface $productAttributeRepository)
     {

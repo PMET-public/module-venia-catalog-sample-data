@@ -6,6 +6,7 @@
 namespace MagentoEse\VeniaCatalogSampleData\Setup;
 
 use Magento\Framework\Setup;
+use Magento\Indexer\Model\Processor;
 
 class Installer implements Setup\SampleData\InstallerInterface
 {
@@ -79,9 +80,15 @@ class Installer implements Setup\SampleData\InstallerInterface
     protected $productPosition;
 
     /**
-     //* @var \Magento\CatalogImportExport\Model\Import\Product\CategoryProcessor
+     * @var \Magento\CatalogImportExport\Model\Import\Product\CategoryProcessor
      */
     protected $categoryProcessorInit;
+
+    /**
+     * 
+     * @var Processor
+     */
+    protected $index;
 
     /**
      * @param \MagentoEse\VeniaCatalogSampleData\Model\Category $categorySetup

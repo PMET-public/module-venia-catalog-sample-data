@@ -5,6 +5,7 @@
  */
 namespace MagentoEse\VeniaCatalogSampleData\Model;
 
+use Magento\Framework\File\Csv;
 use Magento\Framework\Setup\SampleData\Context as SampleDataContext;
 use Magento\Store\Model\StoreManagerInterface;
 
@@ -56,7 +57,11 @@ class Attribute
      */
     protected $entityTypeId;
 
-
+    /**
+     * 
+     * @var Csv
+     */
+    protected $csvReader;
 
     /**
      * @param SampleDataContext $sampleDataContext

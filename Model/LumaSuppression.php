@@ -1,7 +1,10 @@
 <?php
 
 namespace MagentoEse\VeniaCatalogSampleData\Model;
+
+use Magento\Framework\File\Csv;
 use Magento\Framework\Setup\SampleData\Context as SampleDataContext;
+use Magento\Framework\Setup\SampleData\FixtureManager;
 use Magento\Store\Api\Data\StoreInterface;
 
 
@@ -28,6 +31,19 @@ class LumaSuppression
      * @var \Magento\Indexer\Model\Processor
      */
     protected $index;
+
+    /**
+     * 
+     * @var FixtureManager
+     */
+    protected $fixtureManager;
+
+    /**
+     * 
+     * @var Csv
+     */
+    protected $csvReader;
+
 
     /**
      * Product constructor.

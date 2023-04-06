@@ -5,6 +5,7 @@
  */
 namespace MagentoEse\VeniaCatalogSampleData\Model;
 
+use Magento\Framework\File\Csv;
 use Magento\Framework\Setup\SampleData\Context as SampleDataContext;
 
 class ProductPosition
@@ -40,6 +41,12 @@ class ProductPosition
      * @var \Magento\Catalog\Model\ResourceModel\Category\Collection $categoryCollection
      */
     protected $categoryCollection;
+
+    /**
+     * 
+     * @var Csv
+     */
+    protected $csvReader;
 
      /**
      * Product constructor.

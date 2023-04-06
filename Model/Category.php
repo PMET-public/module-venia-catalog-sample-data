@@ -5,6 +5,7 @@
  */
 namespace MagentoEse\VeniaCatalogSampleData\Model;
 
+use Magento\Framework\File\Csv;
 use Magento\Framework\Setup\SampleData\Context as SampleDataContext;
 
 /**
@@ -47,6 +48,12 @@ class Category
      * @var \Magento\Cms\Api\Data\BlockInterfaceFactory
      */
     protected $blockFactory;
+
+    /**
+     * 
+     * @var Csv
+     */
+    protected $csvReader;
 
     /**
      * @param SampleDataContext $sampleDataContext

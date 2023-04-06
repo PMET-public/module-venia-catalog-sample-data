@@ -1,6 +1,7 @@
 {
     "name": "magentoese/module-venia-catalog-sample-data",
     "type": "magento2-module",
+    "version": "1.0.1",
     "require": {
         "magento/framework": "*",
         "magentoese/module-data-install": "*"
